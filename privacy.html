@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Help — Agent Butler Client</title>
+  <title>Data Privacy — Agent Butler Client</title>
   <link rel="icon" href="images/Icon-App-1024x1024.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +80,7 @@
       font-weight: 500;
     }
     .hero p {
-      max-width: 620px;
+      max-width: 640px;
       margin: 0;
       font-size: 1.15rem;
       color: var(--muted);
@@ -88,51 +88,29 @@
     section {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 0 28px 80px;
+      padding: 0 28px 72px;
     }
     h2 {
-      margin: 0 0 24px;
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      margin: 0 0 16px;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
       font-weight: 500;
       letter-spacing: -0.04em;
     }
-    .contact {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 28px 32px;
-    }
-    .contact p {
-      margin: 0;
+    p, li {
       color: var(--muted);
-      max-width: 640px;
+      max-width: 720px;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li { margin-bottom: 8px; }
     .email {
       display: inline-block;
-      margin-top: 16px;
+      margin-top: 8px;
       font-weight: 600;
       letter-spacing: -0.02em;
       text-decoration: none;
-    }
-    .faq {
-      display: grid;
-      gap: 0;
-      border-top: 1px solid var(--line);
-    }
-    .faq article {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .faq h3 {
-      margin: 0 0 8px;
-      font-size: 1.08rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-    .faq p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 720px;
+      color: var(--text);
     }
     footer {
       border-top: 1px solid var(--line);
@@ -163,57 +141,67 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="index.html#features">Features</a>
-        <a href="#contact">Contact</a>
+        <a href="support.html">Help</a>
         <a href="privacy.html">Privacy</a>
       </div>
     </div>
   </nav>
 
   <header class="hero">
-    <h1>Help</h1>
-    <p>Find setup notes, answers to common questions, and a way to reach us.</p>
+    <h1>Data Privacy</h1>
+    <p>Agent Butler Client is built to keep your data on your Mac whenever possible.</p>
   </header>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>
-        If you have a question, need help, or want to report a problem, email us.
-        We typically reply within 2-3 business days.
-      </p>
-      <a class="email" href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a>
-    </div>
+  <section>
+    <h2>What stays on your Mac</h2>
+    <p>
+      Calendar items, chat history, Butler Claw files, and local preferences are stored on this device.
+      API keys are saved in the macOS Keychain and are not uploaded to iCloud or to our servers.
+    </p>
   </section>
 
-  <section id="faq">
-    <h2>Frequently asked questions</h2>
-    <div class="faq">
-      <article>
-        <h3>How do I set up an AI provider?</h3>
-        <p>Open the app, go to Settings, then API Provider. Choose a provider, enter your API Key, Base URL, and Model, then tap Test Connection.</p>
-      </article>
-      <article>
-        <h3>How does Sync iCloud work?</h3>
-        <p>Open Settings, then Sync iCloud, and sign in with your Apple account. Calendar, chat history, and Butler Claw data can sync through your private iCloud database. Sync is optional. The app works locally without it.</p>
-      </article>
-      <article>
-        <h3>Are my API keys uploaded to the cloud?</h3>
-        <p>No. API keys are stored in the macOS Keychain on this device. They are not uploaded to iCloud or to our servers.</p>
-      </article>
-      <article>
-        <h3>How do I use Butler Claw?</h3>
-        <p>Switch to Butler Claw mode, attach files if needed, describe the task and deadline, review the plan, and confirm it onto your calendar.</p>
-      </article>
-      <article>
-        <h3>How do I erase local data?</h3>
-        <p>Open Settings, then General, then Erase Local Usage Data. This clears local usage on this Mac only. It does not delete iCloud data or sign you out.</p>
-      </article>
-      <article>
-        <h3>What are the system requirements?</h3>
-        <p>macOS on Apple Silicon or Intel. You need an API key from a supported provider, or a local GGUF model for on-device inference.</p>
-      </article>
-    </div>
+  <section>
+    <h2>iCloud sync</h2>
+    <p>
+      Sync is optional. If you sign in, selected usage data can be stored in your private Apple iCloud database
+      so you can restore it on this Mac with the same Apple account. We do not operate a separate cloud backend
+      for your chat or calendar content.
+    </p>
+    <p>
+      Profile fields sent to iCloud are limited to your name and email. API keys are not included.
+    </p>
+  </section>
+
+  <section>
+    <h2>Third-party AI providers</h2>
+    <p>
+      When you use a cloud model, your prompts and attachments are sent to the provider you choose,
+      such as OpenAI, Groq, Moonshot, Together, OpenRouter, or DashScope. Those requests follow that
+      provider's privacy policy. Local models stay on your Mac.
+    </p>
+  </section>
+
+  <section>
+    <h2>What we collect</h2>
+    <p>
+      We do not run an account system of our own, and we do not sell personal data.
+      Support emails you send to us are used only to reply and to improve the app.
+    </p>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <ul>
+      <li>You can use the app without Sync iCloud.</li>
+      <li>You can erase local usage data in Settings, then General, then Erase Local Usage Data.</li>
+      <li>You can sign out or change your Apple account in macOS System Settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>For privacy questions, email us.</p>
+    <a class="email" href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a>
   </section>
 
   <footer>
