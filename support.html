@@ -1,0 +1,179 @@
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      padding: 0;
+      list-style: none;
+    }
+    li { margin-bottom: 10px; }
+    li:last-child { margin-bottom: 0; }
+    li {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .qa-title {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .block {
+      margin-bottom: 12px;
+    }
+    .block:last-child {
+      margin-bottom: 0;
+    }
+    .zh-block {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--zh-bg);
+    }
+    .lang-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+
+[5 lines collapsed]
+
+<body>
+  <div class="wrap">
+    <h1>Agent Butler Client</h1>
+    <p class="subtitle">Support &amp; Help — macOS</p>
+    <p class="subtitle">Support &amp; Help · 支持与帮助 — macOS</p>
+    <section id="contact">
+      <h2>Contact Support</h2>
+      <p>
+        If you have questions, need help, or want to report a problem, email us and we will get back to you as soon as possible (typically within 2–3 business days).
+      </p>
+      <h2>Contact Support <span class="alt">/ 联系支持</span></h2>
+      <div class="block">
+        <span class="lang-tag">English</span>
+        <p>
+          If you have questions, need help, or want to report a problem, email us and we will get back to you as soon as possible (typically within 2–3 business days).
+        </p>
+      </div>
+      <div class="block zh-block">
+        <span class="lang-tag">中文</span>
+        <p>
+          如有疑问、需要帮助或想反馈问题，请发送邮件联系我们。我们会尽快回复（通常 2–3 个工作日内）。
+        </p>
+      </div>
+      <a class="email" href="mailto:iosdeveloper26@gmail.com">iosdeveloper26@gmail.com</a>
+    </section>
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <h2>Frequently Asked Questions <span class="alt">/ 常见问题</span></h2>
+      <ul>
+        <li>
+          <strong>How do I set up an AI provider?</strong><br>
+          Open the app → Settings → API Provider. Choose a provider, enter your API Key, Base URL, and Model, then tap Test Connection.
+          <span class="qa-title">How do I set up an AI provider?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>Open the app → Settings → API Provider. Choose a provider, enter your API Key, Base URL, and Model, then tap Test Connection.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>如何配置 AI 提供商？</strong><br>打开 App → 设置 → API 提供商。选择供应商，填写 API Key、Base URL 和 Model，然后点击「测试连接」。</p>
+          </div>
+        </li>
+        <li>
+          <strong>How does Sync iCloud work?</strong><br>
+          Open Settings → Sync iCloud and sign in with your Apple account. Calendar, chat history, and Butler Claw data can sync via your private iCloud database. Sync is optional; the app works locally without it.
+          <span class="qa-title">How does Sync iCloud work?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>Open Settings → Sync iCloud and sign in with your Apple account. Calendar, chat history, and Butler Claw data can sync via your private iCloud database. Sync is optional; the app works locally without it.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>同步 iCloud 如何使用？</strong><br>打开 设置 → 同步 iCloud，使用 Apple 账户登录。日历、对话记录和 Butler Claw 数据可通过 iCloud 私有数据库同步。同步为可选功能，不登录也可本地正常使用。</p>
+          </div>
+        </li>
+        <li>
+          <strong>Are my API keys uploaded to the cloud?</strong><br>
+          No. API keys are stored in the macOS Keychain on your device and are not uploaded to iCloud or our servers.
+          <span class="qa-title">Are my API keys uploaded to the cloud?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>No. API keys are stored in the macOS Keychain on your device and are not uploaded to iCloud or our servers.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>API Key 会上传到云端吗？</strong><br>不会。API Key 仅保存在本机 macOS Keychain 中，不会上传至 iCloud 或我们的服务器。</p>
+          </div>
+        </li>
+        <li>
+          <strong>How do I use Butler Claw?</strong><br>
+          Switch to Butler Claw mode, attach files if needed, describe the task and deadline, review the plan, and confirm to schedule it on your calendar.
+          <span class="qa-title">How do I use Butler Claw?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>Switch to Butler Claw mode, attach files if needed, describe the task and deadline, review the plan, and confirm to schedule it on your calendar.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>如何使用 Butler Claw？</strong><br>切换到 Butler Claw 模式，按需添加附件，描述任务与截止时间，确认执行计划后排入日历即可。</p>
+          </div>
+        </li>
+        <li>
+          <strong>How do I erase local data?</strong><br>
+          Open Settings → General → Erase Local Usage Data. This clears local usage on this Mac only; it does not delete iCloud data or sign you out.
+          <span class="qa-title">How do I erase local data?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>Open Settings → General → Erase Local Usage Data. This clears local usage on this Mac only; it does not delete iCloud data or sign you out.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>如何抹除本机数据？</strong><br>打开 设置 → 通用 → 抹除本机使用数据。此操作仅清除本机使用记录，不会删除 iCloud 数据，也不会退出登录。</p>
+          </div>
+        </li>
+        <li>
+          <strong>What are the system requirements?</strong><br>
+          macOS on Apple Silicon or Intel. An API key from a supported provider, or a local GGUF model for on-device inference.
+          <span class="qa-title">What are the system requirements?</span>
+          <div class="block">
+            <span class="lang-tag">English</span>
+            <p>macOS on Apple Silicon or Intel. An API key from a supported provider, or a local GGUF model for on-device inference.</p>
+          </div>
+          <div class="block zh-block">
+            <span class="lang-tag">中文</span>
+            <p><strong>系统要求是什么？</strong><br>macOS（Apple 芯片或 Intel）。需自备支持的 API 提供商密钥，或使用本机 GGUF 本地模型。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="about">
+      <h2>About the App</h2>
+      <p>
+        Agent Butler Client is a macOS productivity app that helps you plan schedules, chat with AI, and automate document tasks with Butler Claw. It connects to third-party LLM APIs using credentials you provide, or runs local models on your Mac.
+      </p>
+      <h2>About the App <span class="alt">/ 关于 App</span></h2>
+      <div class="block">
+        <span class="lang-tag">English</span>
+        <p>
+          Agent Butler Client is a macOS productivity app that helps you plan schedules, chat with AI, and automate document tasks with Butler Claw. It connects to third-party LLM APIs using credentials you provide, or runs local models on your Mac.
+        </p>
+      </div>
+      <div class="block zh-block">
+        <span class="lang-tag">中文</span>
+        <p>
+          Agent Butler Client 是一款 macOS 效率 App，帮助您制定日程、与 AI 对话，并通过 Butler Claw 自动完成文档类任务。App 使用您提供的密钥连接第三方大模型 API，也支持在本机运行本地模型。
+        </p>
+      </div>
+    </section>
+    <footer>
