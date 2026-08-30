@@ -111,16 +111,68 @@
       border: 1px solid var(--line);
     }
     .hero-art {
+      position: relative;
       max-width: 1080px;
       margin: 12px auto 72px;
       padding: 0 28px;
     }
     .hero-art img {
       width: 100%;
+      height: clamp(240px, 32vw, 360px);
+      object-fit: cover;
+      object-position: center 68%;
       display: block;
       border-radius: 28px;
       background: #fff;
       border: 1px solid var(--line);
+    }
+    .hero-art-copy {
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+      padding: 0 16px;
+    }
+    .hero-art-title {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      font-size: clamp(1.85rem, 4.4vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1.1;
+    }
+    .hero-art-title .deco {
+      position: absolute;
+      color: #0d0d0d;
+      line-height: 0;
+    }
+    .hero-art-title .deco-star-l {
+      left: -10px;
+      bottom: -2px;
+      width: 10px;
+      height: 10px;
+    }
+    .hero-art-title .deco-star-r {
+      right: -22px;
+      top: 2px;
+      width: 13px;
+      height: 13px;
+    }
+    .hero-art-title .deco-star-rb {
+      right: -8px;
+      bottom: 4px;
+      width: 8px;
+      height: 8px;
+    }
+    .hero-art-tag {
+      margin: 10px 0 0;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.02em;
     }
     section {
       max-width: 1080px;
@@ -159,6 +211,84 @@
       margin: 0;
       color: var(--muted);
     }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+    .plan {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .plan h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .badge-soon {
+      background: #0d0d0d;
+      color: #fff;
+      border-color: #0d0d0d;
+    }
+    .plan-price {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+    .plan-note {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .plan ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      flex: 1;
+    }
+    .plan li {
+      position: relative;
+      padding: 7px 0 7px 22px;
+      color: var(--muted);
+    }
+    .plan li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.85em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--text);
+    }
+    .plan.incoming {
+      opacity: 0.92;
+    }
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -187,6 +317,7 @@
     .footer-inner a { text-decoration: none; }
     @media (max-width: 800px) {
       .grid,
+      .plans,
       .split { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hero { padding-top: 56px; }
@@ -203,6 +334,8 @@
       <div class="nav-links">
         <a href="#features">Product</a>
         <a href="#features">Features</a>
+        <a href="#plans">Plans</a>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
         <a href="#support">Support</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Help</a>
@@ -217,13 +350,28 @@
       Chat, calendar, and Butler Claw live in one native workspace.
     </p>
     <div class="actions">
-      <a class="btn btn-dark" href="#features">Learn more</a>
-      <a class="btn btn-light" href="support.html">Get support</a>
+      <a class="btn btn-dark" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download on the Mac App Store</a>
+      <a class="btn btn-light" href="#plans">See plans</a>
     </div>
   </header>
 
   <div class="hero-art">
     <img src="images/hero.png" alt="Agent Butler Client icon and mascot">
+    <div class="hero-art-copy">
+      <p class="hero-art-title">
+        <svg class="deco deco-star-l" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M6 0.6l1.3 3.7h3.9l-3.1 2.3 1.2 3.8L6 8.2 2.7 10.4l1.2-3.8L0.8 4.3h3.9z" fill="currentColor"/>
+        </svg>
+        Agent Butler Client
+        <svg class="deco deco-star-r" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M6 0.4l1.4 3.8h4l-3.2 2.4 1.2 3.8L6 8.1 2.6 10.4l1.2-3.8L0.6 4.2h4z" fill="currentColor"/>
+        </svg>
+        <svg class="deco deco-star-rb" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M6 0.8l1.1 3.2h3.4L8 6l1 3.2L6 7.2 3 9.2 4 6 1.5 4h3.4z" fill="currentColor"/>
+        </svg>
+      </p>
+      <p class="hero-art-tag">your personal assistant</p>
+    </div>
   </div>
 
   <section id="features">
@@ -257,6 +405,63 @@
     </div>
   </section>
 
+  <section id="plans">
+    <h2>Plans</h2>
+    <p class="muted section-lead">
+      Buy the app for permanent access to Entry features. Subscribe to Premium for local models and web search.
+      Pro is incoming.
+    </p>
+    <div class="actions" style="margin-bottom: 36px;">
+      <a class="btn btn-dark" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download on the Mac App Store</a>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <div class="plan-top">
+          <h3>Entry</h3>
+          <span class="badge">Included</span>
+        </div>
+        <p class="plan-price">$5 app purchase</p>
+        <p class="plan-note">One-time. Permanent access to core features.</p>
+        <ul>
+          <li>Basic chat</li>
+          <li>Calendar</li>
+          <li>Cloud API (Groq)</li>
+          <li>Schedule Planning</li>
+          <li>Q&amp;A and Planning</li>
+          <li>Butler Claw</li>
+          <li>LLM reminders</li>
+          <li>Writing, summary, code, and planning</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <div class="plan-top">
+          <h3>Premium</h3>
+          <span class="badge">Available</span>
+        </div>
+        <p class="plan-price">$2.99 / month</p>
+        <p class="plan-note">Or $7.99 every 3 months. Includes everything in Entry.</p>
+        <ul>
+          <li>Everything in Entry</li>
+          <li>Local model inference</li>
+          <li>Web search in all chat modes</li>
+        </ul>
+      </article>
+      <article class="plan incoming">
+        <div class="plan-top">
+          <h3>Pro</h3>
+          <span class="badge badge-soon">Incoming</span>
+        </div>
+        <p class="plan-price">Monthly</p>
+        <p class="plan-note">Coming soon. Includes everything in Premium.</p>
+        <ul>
+          <li>Everything in Premium</li>
+          <li>Smarter workflows</li>
+          <li>Butler Claw for more file types</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
   <section id="privacy">
     <h2>Data Privacy</h2>
     <div class="split">
@@ -283,7 +488,11 @@
   <footer>
     <div class="footer-inner">
       <span>Agent Butler Client</span>
-      <a href="privacy.html">Data Privacy</a>
+      <div>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+        &nbsp;&middot;&nbsp;
+        <a href="privacy.html">Data Privacy</a>
+      </div>
     </div>
   </footer>
 </body>
