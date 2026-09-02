@@ -213,7 +213,7 @@
     }
     .plans {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: minmax(0, 440px);
       gap: 18px;
       align-items: stretch;
     }
@@ -338,6 +338,7 @@
         <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
         <a href="#support">Support</a>
         <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <a href="support.html">Help</a>
       </div>
     </div>
@@ -408,8 +409,8 @@
   <section id="plans">
     <h2>Plans</h2>
     <p class="muted section-lead">
-      Buy the app for permanent access to Entry features. Subscribe to Premium for local models and web search.
-      Pro is incoming.
+      Agent Butler Monthly is an auto-renewable subscription. One plan unlocks every feature in the app.
+      Cancel anytime in your Apple Account settings.
     </p>
     <div class="actions" style="margin-bottom: 36px;">
       <a class="btn btn-dark" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download on the Mac App Store</a>
@@ -417,46 +418,18 @@
     <div class="plans">
       <article class="plan">
         <div class="plan-top">
-          <h3>Entry</h3>
-          <span class="badge">Included</span>
+          <h3>Agent Butler Monthly</h3>
+          <span class="badge">Subscription</span>
         </div>
-        <p class="plan-price">$5 app purchase</p>
-        <p class="plan-note">One-time. Permanent access to core features.</p>
+        <p class="plan-price">$5.99 / month</p>
+        <p class="plan-note">Auto-renews monthly until cancelled. Price is shown in the App Store at checkout.</p>
         <ul>
-          <li>Basic chat</li>
-          <li>Calendar</li>
-          <li>Cloud API (Groq)</li>
-          <li>Schedule Planning</li>
-          <li>Q&amp;A and Planning</li>
+          <li>Butler &amp; Planning</li>
           <li>Butler Claw</li>
-          <li>LLM reminders</li>
-          <li>Writing, summary, code, and planning</li>
-        </ul>
-      </article>
-      <article class="plan">
-        <div class="plan-top">
-          <h3>Premium</h3>
-          <span class="badge">Available</span>
-        </div>
-        <p class="plan-price">$2.99 / month</p>
-        <p class="plan-note">Or $7.99 every 3 months. Includes everything in Entry.</p>
-        <ul>
-          <li>Everything in Entry</li>
+          <li>Calendar and reminders</li>
+          <li>Cloud API (Groq)</li>
           <li>Local model inference</li>
-          <li>Web search in all chat modes</li>
-        </ul>
-      </article>
-      <article class="plan incoming">
-        <div class="plan-top">
-          <h3>Pro</h3>
-          <span class="badge badge-soon">Incoming</span>
-        </div>
-        <p class="plan-price">Monthly</p>
-        <p class="plan-note">Coming soon. Includes everything in Premium.</p>
-        <ul>
-          <li>Everything in Premium</li>
-          <li>Smarter workflows</li>
-          <li>Butler Claw for more file types</li>
+          <li>Web search in all modes</li>
         </ul>
       </article>
     </div>
@@ -492,6 +465,8 @@
         <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
         &nbsp;&middot;&nbsp;
         <a href="privacy.html">Data Privacy</a>
+        &nbsp;&middot;&nbsp;
+        <a href="terms.html">Terms of Use</a>
       </div>
     </div>
   </footer>
