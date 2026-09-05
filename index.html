@@ -189,154 +189,120 @@
       max-width: 640px;
       margin: 0 0 48px;
     }
-    .workflow-map {
-      position: relative;
-      padding: 8px 0 16px;
+    #features .section-lead {
+      max-width: 560px;
+      margin-bottom: 28px;
     }
-    .workflow-hub {
-      position: relative;
-      z-index: 2;
-      max-width: 280px;
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-    .hub-node {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 88px;
-      min-width: 88px;
-      padding: 20px 28px;
-      border-radius: 999px;
-      background: var(--text);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      line-height: 1.25;
-      box-shadow: 0 18px 40px rgba(13, 13, 13, 0.08);
-    }
-    .workflow-hub p {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-    .workflow-spine {
-      position: absolute;
-      left: 34px;
-      top: 120px;
-      bottom: 120px;
-      width: 1px;
-      background: linear-gradient(180deg, var(--line), rgba(230, 230, 225, 0.2));
-      pointer-events: none;
-    }
-    .workflow-stairs {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .product-flow {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      align-items: center;
+      gap: 0;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0;
     }
-    .workflow-step {
-      --offset: 0px;
-      position: relative;
+    .flow-stage {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 8px;
+    }
+    .flow-stage-input {
+      flex-wrap: wrap;
+    }
+    .flow-stage-single {
+      max-width: 360px;
+    }
+    .flow-stage-loop {
       max-width: 560px;
-      margin-left: var(--offset);
-      padding: 22px 24px 22px 56px;
+      align-items: center;
+    }
+    .flow-node {
+      flex: 1 1 160px;
+      max-width: 220px;
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 22px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 16px;
+      padding: 14px 16px;
     }
-    .workflow-step:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 32px rgba(13, 13, 13, 0.06);
+    .flow-node-primary {
+      max-width: 240px;
+      border-color: rgba(13, 13, 13, 0.16);
+      box-shadow: 0 8px 20px rgba(13, 13, 13, 0.04);
     }
-    .workflow-step::before {
-      content: attr(data-index);
-      position: absolute;
-      left: 18px;
-      top: 22px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
+    .flow-node-engine {
+      flex: 0 1 180px;
+      max-width: 200px;
       background: var(--bg);
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-      font-size: 0.78rem;
+    }
+    .flow-kicker {
+      display: inline-block;
+      margin-bottom: 4px;
+      font-size: 0.62rem;
       font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
       color: var(--muted);
     }
-    .workflow-step::after {
-      content: "";
-      position: absolute;
-      left: 31px;
-      top: -18px;
-      width: 1px;
-      height: 18px;
-      background: var(--line);
-    }
-    .workflow-step:first-child::after {
-      display: none;
-    }
-    .workflow-step h3 {
-      margin: 0 0 8px;
-      font-size: 1.05rem;
+    .flow-node h3 {
+      margin: 0 0 4px;
+      font-size: 0.92rem;
       font-weight: 600;
       letter-spacing: -0.02em;
+      line-height: 1.25;
     }
-    .workflow-step p {
+    .flow-node p {
       margin: 0;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.8rem;
+      line-height: 1.45;
     }
-    .workflow-step[data-index="1"] { --offset: 0px; }
-    .workflow-step[data-index="2"] { --offset: 72px; }
-    .workflow-step[data-index="3"] { --offset: 144px; }
-    .workflow-step[data-index="4"] { --offset: 216px; }
-    .workflow-branches {
-      position: relative;
-      margin-top: 36px;
-      padding-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-    .workflow-branches::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 216px;
-      width: 180px;
-      height: 28px;
-      border-left: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      border-bottom-left-radius: 18px;
-    }
-    .branch-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 22px 24px;
-    }
-    .branch-card h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-    .branch-card p {
-      margin: 0;
+    .flow-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 24px;
       color: var(--muted);
       font-size: 0.95rem;
+      line-height: 1;
+      user-select: none;
     }
-    .branch-card:nth-child(1) {
-      margin-top: 12px;
+    .flow-link-down {
+      width: auto;
+      min-height: 24px;
+      padding: 2px 0 4px;
+      font-size: 1rem;
     }
-    .branch-card:nth-child(2) {
-      margin-top: 36px;
+    .flow-caption {
+      width: 100%;
+      max-width: 560px;
+      margin: 0;
+      padding: 0 4px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.35;
+    }
+    .flow-support {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      width: 100%;
+    }
+    .flow-support span {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 500;
     }
     .platform-grid {
       display: grid;
@@ -500,20 +466,19 @@
       .platform-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
       .hero { padding-top: 56px; }
-      .workflow-spine { display: none; }
-      .workflow-step {
-        --offset: 0px !important;
-        margin-left: 0;
-        padding-left: 56px;
+      .flow-stage {
+        flex-direction: column;
+        align-items: center;
       }
-      .workflow-branches {
-        grid-template-columns: 1fr;
+      .flow-node,
+      .flow-node-primary,
+      .flow-node-engine {
+        max-width: 100%;
+        width: 100%;
       }
-      .workflow-branches::before {
-        display: none;
-      }
-      .branch-card:nth-child(2) {
-        margin-top: 0;
+      .flow-link {
+        transform: rotate(90deg);
+        min-height: 28px;
       }
     }
   </style>
@@ -631,43 +596,76 @@
   </section>
 
   <section id="features">
-    <h2>What you can do with Agent Butler</h2>
+    <h2>How Agent Butler fits together</h2>
     <p class="muted section-lead">
-      Start with a conversation, walk down the loop step by step, and branch into the tools that fit how you work.
+      You talk and plan with AI, confirm what lands on the calendar, move through your day, and let Butler Claw return finished work into the same loop.
     </p>
-    <div class="workflow-map">
-      <div class="workflow-hub">
-        <div class="hub-node">Your intent</div>
-        <p>One loop from idea to calendar to finished work</p>
+    <div class="product-flow" role="img" aria-label="Product flow from Q&A and planning through calendar and workflow to results, with Butler Claw feeding your workflow">
+      <div class="flow-stage flow-stage-input">
+        <article class="flow-node flow-node-human">
+          <span class="flow-kicker">Human</span>
+          <h3>You</h3>
+          <p>Describe goals, ask questions, and approve plans before anything is scheduled.</p>
+        </article>
+        <div class="flow-link" aria-hidden="true">→</div>
+        <article class="flow-node">
+          <span class="flow-kicker">Q&amp;A &amp; Planning</span>
+          <h3>Butler &amp; Planning chat</h3>
+          <p>Natural-language chat, attachments, goal refinement, and batch scheduling.</p>
+        </article>
+        <div class="flow-link" aria-hidden="true">←</div>
+        <article class="flow-node flow-node-engine">
+          <span class="flow-kicker">Inference</span>
+          <h3>Cloud API &amp; Local Model</h3>
+          <p>Your Groq API key, or on-device GGUF models through llama.cpp.</p>
+        </article>
       </div>
-      <div class="workflow-spine" aria-hidden="true"></div>
-      <ol class="workflow-stairs">
-        <li class="workflow-step" data-index="1">
-          <h3>Schedule Planning</h3>
-          <p>Describe what you need in plain language. Review a suggested time slot, then add it to your calendar.</p>
-        </li>
-        <li class="workflow-step" data-index="2">
-          <h3>Q&amp;A and Planning</h3>
-          <p>Chat with attachments, refine a goal, and turn rough notes into batches of tasks.</p>
-        </li>
-        <li class="workflow-step" data-index="3">
-          <h3>Butler Claw</h3>
-          <p>Hand off document work as a scheduled task. The app runs it in the background and saves the result.</p>
-        </li>
-        <li class="workflow-step" data-index="4">
-          <h3>Custom workflows</h3>
-          <p>Shape how the assistant thinks with Agent Loop, skills, and the steps you choose to automate.</p>
-        </li>
-      </ol>
-      <div class="workflow-branches">
-        <article class="branch-card">
-          <h3>Private by default</h3>
-          <p>API keys stay in the macOS Keychain. They are not uploaded to iCloud.</p>
+
+      <div class="flow-link flow-link-down" aria-hidden="true">↓</div>
+      <p class="flow-caption">You confirm → tasks become calendar events</p>
+      <div class="flow-link flow-link-down" aria-hidden="true">↓</div>
+
+      <div class="flow-stage flow-stage-single">
+        <article class="flow-node">
+          <span class="flow-kicker">Schedule</span>
+          <h3>Calendar</h3>
+          <p>Confirmed tasks and events sit on your timeline with reminders at the right moments.</p>
         </article>
-        <article class="branch-card">
-          <h3>Local models</h3>
-          <p>Run a GGUF model on your Mac when you want inference to stay on-device.</p>
+      </div>
+
+      <div class="flow-link flow-link-down" aria-hidden="true">↓</div>
+      <p class="flow-caption">Your day runs here; Butler Claw feeds back in</p>
+
+      <div class="flow-stage flow-stage-loop">
+        <article class="flow-node">
+          <span class="flow-kicker">Butler Claw</span>
+          <h3>Scheduled execution</h3>
+          <p>Document work, research, and deliverables run on the times you set.</p>
         </article>
+        <div class="flow-link" aria-hidden="true">→</div>
+        <article class="flow-node flow-node-primary">
+          <span class="flow-kicker">Human workflow</span>
+          <h3>Your workflow</h3>
+          <p>Reminders, rescheduling, overdue tracking, and the way you actually move through the day.</p>
+        </article>
+      </div>
+
+      <div class="flow-link flow-link-down" aria-hidden="true">↓</div>
+      <p class="flow-caption">Finished work comes back to you</p>
+      <div class="flow-link flow-link-down" aria-hidden="true">↓</div>
+
+      <div class="flow-stage flow-stage-single">
+        <article class="flow-node">
+          <span class="flow-kicker">Output</span>
+          <h3>Results</h3>
+          <p>Completed Items: summaries, PDFs, revised documents, scripts, and other deliverables.</p>
+        </article>
+      </div>
+
+      <div class="flow-support" aria-label="Supporting capabilities">
+        <span>Private by default</span>
+        <span>Custom skills</span>
+        <span>Web search</span>
       </div>
     </div>
   </section>
