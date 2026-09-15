@@ -4,214 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Privacy — Agent Butler Client</title>
-  <link rel="icon" href="images/Icon-App-1024x1024.png">
+  <link rel="icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f7f4;
-      --surface: #ffffff;
-      --text: #0d0d0d;
-      --muted: #5b5b5b;
-      --line: #e6e6e1;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; }
-    body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; }
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(247, 247, 244, 0.86);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 28px;
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-    }
-    .brand img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-    }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      font-size: 0.95rem;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: var(--muted);
-    }
-    .nav-links a:hover { color: var(--text); }
-    .hero {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 88px 28px 48px;
-    }
-    .hero h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2.6rem, 6vw, 4.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-      font-weight: 500;
-    }
-    .hero p {
-      max-width: 640px;
-      margin: 0;
-      font-size: 1.15rem;
-      color: var(--muted);
-    }
-    section {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 28px 72px;
-    }
-    h2 {
-      margin: 0 0 16px;
-      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-      font-weight: 500;
-      letter-spacing: -0.04em;
-    }
-    p, li {
-      color: var(--muted);
-      max-width: 720px;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li { margin-bottom: 8px; }
-    .email {
-      display: inline-block;
-      margin-top: 8px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      text-decoration: none;
-      color: var(--text);
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    .footer-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .footer-inner a { text-decoration: none; }
-    @media (max-width: 800px) {
-      .nav-links { display: none; }
-      .hero { padding-top: 56px; }
-    }
-  </style>
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">
-        <img src="images/Icon-App-1024x1024.png" alt="Agent Butler Client">
-        Agent Butler Client
-      </a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="support.html">Help</a>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="images/icon.png" alt=""> Agent Butler</a>
+      <div class="nav-tools">
+        <a class="btn btn-accent" href="index.html">Home</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
+  <main class="page wrap prose">
     <h1>Data Privacy</h1>
-    <p>Agent Butler Client is built to keep your data on your Mac whenever possible.</p>
-  </header>
+    <p>Built to keep your data on this Mac whenever possible.</p>
 
-  <section>
     <h2>What stays on your Mac</h2>
-    <p>
-      Calendar items, chat history, Butler Claw files, and local preferences are stored on this device.
-      API keys are saved in the macOS Keychain and are not uploaded to iCloud or to our servers.
-    </p>
-  </section>
+    <p>Calendar, chats, Work Brief, window memories, Butler Claw files, and preferences stay on this device. API keys are stored in the macOS Keychain and are not uploaded to iCloud or to our servers. Files in your chosen workspace are not included in sync.</p>
 
-  <section>
     <h2>iCloud sync</h2>
-    <p>
-      Sync is optional. If you sign in, selected usage data can be stored in your private Apple iCloud database
-      so you can restore it on this Mac with the same Apple account. We do not operate a separate cloud backend
-      for your chat or calendar content.
-    </p>
-    <p>
-      Profile fields sent to iCloud are limited to your name and email. API keys are not included.
-    </p>
-  </section>
+    <p>Optional. After sign-in, selected calendar, chat, and profile data can live in your private iCloud database. We do not run a separate backend for chat or calendar. Sync excludes API keys, model weights, and workspace files.</p>
 
-  <section>
     <h2>Third-party AI providers</h2>
-    <p>
-      When you use a cloud model, your prompts and attachments are sent to the provider you choose,
-      such as OpenAI, Groq, Moonshot, Together, OpenRouter, or DashScope. Those requests follow that
-      provider's privacy policy. Local models stay on your Mac.
-    </p>
-  </section>
+    <p>Cloud models send prompts and attachments to the provider you choose (Groq or an OpenAI-compatible endpoint). MLX / llama.cpp inference stays on this Mac.</p>
 
-  <section>
     <h2>What we collect</h2>
-    <p>
-      We do not run an account system of our own, and we do not sell personal data.
-      Support emails you send to us are used only to reply and to improve the app.
-    </p>
-  </section>
+    <p>We do not run our own account system, and we do not sell personal data. Support emails are used only to reply and to improve the app.</p>
 
-  <section>
     <h2>Your choices</h2>
     <ul>
       <li>You can use the app without Sync iCloud.</li>
-      <li>You can erase local usage data in Settings, then General, then Erase Local Usage Data.</li>
-      <li>You can sign out or change your Apple account in macOS System Settings.</li>
+      <li>Erase local usage data in Settings → General.</li>
+      <li>Sign out or change Apple accounts in System Settings.</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>For privacy questions, email us.</p>
-    <a class="email" href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a>
-  </section>
+    <p><a href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a></p>
+  </main>
 
   <footer>
-    <div class="footer-inner">
-      <span>Agent Butler Client</span>
-      <a href="privacy.html">Data Privacy</a>
-      &nbsp;&middot;&nbsp;
-      <a href="terms.html">Terms of Use</a>
+    <div class="wrap footer-inner">
+      <a href="index.html">Agent Butler Client</a>
+      <div>
+        <a href="support.html">Help</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+      </div>
     </div>
   </footer>
 </body>
