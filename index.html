@@ -103,7 +103,7 @@
         <article class="card">
           <div class="icon-dot">4</div>
           <h3>Reads, writes, and edits files</h3>
-          <p>On MLX, list, read, write, edit, and patch files in the folder you choose. Writes stay in the sandbox and that folder — no generic terminal.</p>
+          <p>On MLX, list, read, write, edit, and patch files in the folder you choose. Writes stay in the sandbox and that folder. Developer mode in Butler Claw or Auto Butler can auto-run allowlisted commands; there is no generic terminal.</p>
         </article>
         <article class="card">
           <div class="icon-dot">5</div>
@@ -143,14 +143,104 @@
   <section id="demo">
     <div class="wrap">
       <h2>A session on Mac</h2>
-      <p class="section-lead">A screen recording of Agent Butler Client. See planning, file work, and the calendar in one place.</p>
-      <div class="video-frame">
-        <video controls preload="metadata" playsinline poster="images/demo-poster.jpg">
-          <source src="images/demo.mp4" type="video/mp4">
-        </video>
+      <p class="section-lead">Three short clips of planning, writing, and batch jobs. Click any clip to watch it larger.</p>
+
+      <div class="demo-features">
+        <article class="demo-feature">
+          <h3>Planning</h3>
+          <p>Give it a goal and it can turn that into a calendar you can actually follow. With web search on, the plan can stay closer to your current situation—live hours, traffic, and what’s happening now.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-planning.mp4"
+            data-demo-poster="images/demo-planning-poster.jpg"
+            data-demo-title="Planning"
+          >
+            <img src="images/demo-planning-poster.jpg" alt="Planning clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+        <article class="demo-feature">
+          <h3>File writing</h3>
+          <p>Ask for a report, summary, or script. The model can look up public facts and write the document you asked for into the workspace you choose.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-file-writing.mp4"
+            data-demo-poster="images/demo-file-writing-poster.jpg"
+            data-demo-title="File writing"
+          >
+            <img src="images/demo-file-writing-poster.jpg" alt="File writing clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+        <article class="demo-feature">
+          <h3>Batch tasks</h3>
+          <p>In Butler Claw, import a batch of jobs the assistant can run—writing, code, and similar work. With Auto Mode on, registered tasks complete when they’re due.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-batch-tasks.mp4"
+            data-demo-poster="images/demo-batch-tasks-poster.jpg"
+            data-demo-title="Batch tasks"
+          >
+            <img src="images/demo-batch-tasks-poster.jpg" alt="Batch tasks clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+      </div>
+
+      <div class="demo-test-flow">
+        <h3>Test flow</h3>
+        <p>A longer walkthrough used to verify planning, file work, and the calendar in one sitting.</p>
+        <div class="video-frame">
+          <video controls preload="metadata" playsinline poster="images/demo-poster.jpg">
+            <source src="images/demo.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </section>
+
+  <dialog class="demo-lightbox" id="demo-lightbox" aria-label="Demo video">
+    <form method="dialog" class="demo-lightbox-bar">
+      <p class="demo-lightbox-title" id="demo-lightbox-title"></p>
+      <button type="submit" class="demo-lightbox-close" aria-label="Close">Close</button>
+    </form>
+    <video id="demo-lightbox-video" controls playsinline></video>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById("demo-lightbox");
+      var player = document.getElementById("demo-lightbox-video");
+      var title = document.getElementById("demo-lightbox-title");
+      if (!dialog || !player) return;
+
+      function openClip(button) {
+        var src = button.getAttribute("data-demo-src");
+        if (!src) return;
+        title.textContent = button.getAttribute("data-demo-title") || "";
+        player.poster = button.getAttribute("data-demo-poster") || "";
+        player.src = src;
+        dialog.showModal();
+        player.play().catch(function () {});
+      }
+
+      function closeClip() {
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+      }
+
+      document.querySelectorAll(".demo-thumb").forEach(function (button) {
+        button.addEventListener("click", function () { openClip(button); });
+      });
+      dialog.addEventListener("close", closeClip);
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
 
   <section id="pricing">
     <div class="wrap">
@@ -207,7 +297,7 @@
       </details>
       <details class="faq">
         <summary>Can it run arbitrary terminal commands?</summary>
-        <p>No. The Mac App Store sandbox does not allow arbitrary terminal processes. File tools only touch the sandbox and your chosen workspace. Commands meant for your Mac are shown for you to copy or run.</p>
+        <p>No arbitrary shell. File tools stay in the sandbox and your chosen workspace. Developer mode in Butler Claw or Auto Butler can run an allowlisted subset (python3, pytest, swift, node, ruby, go) after you install a helper once. Other commands are copied for you to paste into Terminal.</p>
       </details>
       <details class="faq">
         <summary>Is my data uploaded?</summary>

@@ -256,6 +256,126 @@ h2 {
   aspect-ratio: 1280 / 832;
 }
 
+.demo-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.demo-feature {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.demo-feature h3 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+  letter-spacing: -0.03em;
+}
+.demo-feature p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  flex: 1 1 auto;
+}
+.demo-thumb {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  cursor: zoom-in;
+  position: relative;
+}
+.demo-thumb img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 1280 / 832;
+  object-fit: cover;
+}
+.demo-thumb-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 252, 247, 0.92);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.demo-thumb:hover .demo-thumb-play,
+.demo-thumb:focus-visible .demo-thumb-play {
+  background: #fff;
+}
+.demo-test-flow {
+  margin-top: 40px;
+}
+.demo-test-flow h3 {
+  margin: 0 0 8px;
+  font-size: 1.18rem;
+  letter-spacing: -0.03em;
+}
+.demo-test-flow p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.demo-lightbox {
+  width: min(1080px, calc(100% - 32px));
+  max-width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #111;
+  overflow: hidden;
+}
+.demo-lightbox::backdrop {
+  background: rgba(27, 25, 22, 0.72);
+}
+.demo-lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+}
+.demo-lightbox-title {
+  margin: 0;
+  font-weight: 600;
+}
+.demo-lightbox-close {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+.demo-lightbox-close:hover {
+  color: var(--text);
+}
+.demo-lightbox video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 832;
+  background: #000;
+}
+
 .price {
   font-size: 2.2rem;
   font-weight: 600;
@@ -327,4 +447,7 @@ footer {
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .step { grid-template-columns: 1fr; }
   .hero { padding-top: 48px; }
+}
+@media (max-width: 640px) {
+  .demo-features { grid-template-columns: 1fr; }
 }
