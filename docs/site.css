@@ -256,15 +256,23 @@ h2 {
   aspect-ratio: 1280 / 832;
 }
 
-.demo-features {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-.demo-feature {
+.demo-board {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+.demo-copy,
+.demo-videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+}
+.demo-feature,
+.demo-thumb {
+  flex: 1 1 0;
   min-width: 0;
 }
 .demo-feature h3 {
@@ -273,16 +281,14 @@ h2 {
   letter-spacing: -0.03em;
 }
 .demo-feature p {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
-  flex: 1 1 auto;
 }
 .demo-thumb {
+  appearance: none;
+  -webkit-appearance: none;
   display: block;
-  width: 100%;
-  min-width: 0;
-  margin-top: auto;
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -290,12 +296,14 @@ h2 {
   background: #111;
   cursor: zoom-in;
   position: relative;
+  font: inherit;
+  color: inherit;
+  text-align: left;
 }
 .demo-thumb img {
   display: block;
   width: 100%;
   max-width: 100%;
-  min-width: 0;
   height: auto;
   aspect-ratio: 1280 / 832;
   object-fit: cover;
@@ -448,6 +456,9 @@ footer {
   .step { grid-template-columns: 1fr; }
   .hero { padding-top: 48px; }
 }
-@media (max-width: 640px) {
-  .demo-features { grid-template-columns: 1fr; }
+@media (max-width: 720px) {
+  .demo-copy,
+  .demo-videos {
+    flex-direction: column;
+  }
 }
