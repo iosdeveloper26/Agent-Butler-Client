@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Butler Client</title>
+  <meta name="description" content="Your personalized AI assistant for macOS. Plan the calendar, run file tasks, and keep Who I am / Consider at work in every mode.">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="">
+        Agent Butler
+      </a>
+      <div class="nav-links">
+        <a href="#start">Start</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Help</a>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+      </div>
+      <div class="nav-tools">
+        <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Mac App Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <img class="mascot" src="images/mascot.png" alt="Agent Butler mascot">
+    <p class="kicker">macOS · calendar, chat, and files</p>
+    <h1>Agent Butler</h1>
+    <p class="tagline">Your personalized AI assistant.</p>
+    <p class="lede">
+      Fill Who I am and Consider at work, then talk in natural language.
+      Planning, Butler Claw, and Auto Mode use that brief when they schedule, write files, and follow up.
+      Use a cloud API or on-device MLX. Your data stays on this Mac by default.
+    </p>
+    <div class="actions">
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Get the app</a>
+      <a class="btn btn-ghost" href="#demo">Watch a session</a>
+    </div>
+  </header>
+
+  <section id="start">
+    <div class="wrap">
+      <h2>Three steps</h2>
+      <p class="section-lead">A native Mac app. One purchase unlocks every feature in the app.</p>
+      <div class="steps">
+        <article class="step">
+          <span class="step-n">01</span>
+          <div>
+            <h3>Install from the Mac App Store</h3>
+            <p>Apple silicon or Intel. Auto Mode needs on-device MLX on Apple silicon.</p>
+          </div>
+        </article>
+        <article class="step">
+          <span class="step-n">02</span>
+          <div>
+            <h3>Connect a model</h3>
+            <p>Paste a Groq or OpenAI-compatible key, or load MLX in-app / llama.cpp locally. Auto Mode is MLX-only.</p>
+          </div>
+        </article>
+        <article class="step">
+          <span class="step-n">03</span>
+          <div>
+            <h3>Fill the Work Brief</h3>
+            <p>Open You and write Who I am / Consider at work. Planning, Claw, and Auto Mode all honor it.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="wrap">
+      <h2>What it can do</h2>
+      <p class="section-lead">Chat is only the front door. Plans land on the calendar; files land in the workspace you choose.</p>
+      <div class="grid-3">
+        <article class="card">
+          <div class="icon-dot">1</div>
+          <h3>Runs on your Mac</h3>
+          <p>Calendar, chats, and briefs stay on-device. Keys live in Keychain. Cloud models send prompts only to the provider you pick; MLX stays on-device.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">2</div>
+          <h3>Three ways to work</h3>
+          <p>Butler &amp; Planning for chat and scheduling; Butler Claw for file jobs on the calendar; Auto Mode in its own window for due work.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">3</div>
+          <h3>Personalized to you</h3>
+          <p>Who I am / Consider at work is included in planning and Claw. Optional live memory. The current message wins, then the calendar.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">4</div>
+          <h3>Reads, writes, and edits files</h3>
+          <p>On MLX, list, read, write, edit, and patch files in the folder you choose. Writes stay in the sandbox and that folder. Developer mode in Butler Claw or Auto Butler can auto-run allowlisted commands; there is no generic terminal.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">5</div>
+          <h3>Tool loop until finished</h3>
+          <p>Claw and Auto Mode can search and edit across several turns. Until Done stops when the task is finished or a usable file is written, with a safety cap.</p>
+        </article>
+        <article class="card">
+          <div class="icon-dot">6</div>
+          <h3>Skills and the public web</h3>
+          <p>Optional web search for live facts. Skills bound which tools may run. Queries never include local paths or API keys.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="modes">
+    <div class="wrap">
+      <h2>Planning · Claw · Auto</h2>
+      <p class="section-lead">One Work Brief. Three tempos.</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Butler &amp; Planning</h3>
+          <p>Natural-language chat, attachments, batch plans. “Basketball at 9am” gets a confirmation card; finished plans can land on the calendar.</p>
+        </article>
+        <article class="card">
+          <h3>Butler Claw</h3>
+          <p>Attach files, set a deadline, approve the plan. PDF / Word / sheets / scripts return to the workspace. Due jobs run about 15 minutes before start.</p>
+        </article>
+        <article class="card">
+          <h3>Auto Mode · MLX only</h3>
+          <p>Its own window; scans the calendar about every 15 minutes. Never Groq or llama.cpp. Not available on Intel Macs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="wrap">
+      <h2>A session on Mac</h2>
+      <p class="section-lead">Three short clips of planning, writing, and batch jobs. Click any clip to watch it larger.</p>
+
+      <div class="demo-features">
+        <article class="demo-feature">
+          <h3>Planning</h3>
+          <p>Give it a goal and it can turn that into a calendar you can actually follow. With web search on, the plan can stay closer to your current situation—live hours, traffic, and what’s happening now.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-planning.mp4"
+            data-demo-poster="images/demo-planning-poster.jpg"
+            data-demo-title="Planning"
+          >
+            <img src="images/demo-planning-poster.jpg" alt="Planning clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+        <article class="demo-feature">
+          <h3>File writing</h3>
+          <p>Ask for a report, summary, or script. The model can look up public facts and write the document you asked for into the workspace you choose.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-file-writing.mp4"
+            data-demo-poster="images/demo-file-writing-poster.jpg"
+            data-demo-title="File writing"
+          >
+            <img src="images/demo-file-writing-poster.jpg" alt="File writing clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+        <article class="demo-feature">
+          <h3>Batch tasks</h3>
+          <p>In Butler Claw, import a batch of jobs the assistant can run—writing, code, and similar work. With Auto Mode on, registered tasks complete when they’re due.</p>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-batch-tasks.mp4"
+            data-demo-poster="images/demo-batch-tasks-poster.jpg"
+            data-demo-title="Batch tasks"
+          >
+            <img src="images/demo-batch-tasks-poster.jpg" alt="Batch tasks clip">
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </article>
+      </div>
+
+      <div class="demo-test-flow">
+        <h3>Test flow</h3>
+        <p>A longer walkthrough used to verify planning, file work, and the calendar in one sitting.</p>
+        <div class="video-frame">
+          <video controls preload="metadata" playsinline poster="images/demo-poster.jpg">
+            <source src="images/demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="demo-lightbox" id="demo-lightbox" aria-label="Demo video">
+    <form method="dialog" class="demo-lightbox-bar">
+      <p class="demo-lightbox-title" id="demo-lightbox-title"></p>
+      <button type="submit" class="demo-lightbox-close" aria-label="Close">Close</button>
+    </form>
+    <video id="demo-lightbox-video" controls playsinline></video>
+  </dialog>
+  <script>
+    (function () {
+      var dialog = document.getElementById("demo-lightbox");
+      var player = document.getElementById("demo-lightbox-video");
+      var title = document.getElementById("demo-lightbox-title");
+      if (!dialog || !player) return;
+
+      function openClip(button) {
+        var src = button.getAttribute("data-demo-src");
+        if (!src) return;
+        title.textContent = button.getAttribute("data-demo-title") || "";
+        player.poster = button.getAttribute("data-demo-poster") || "";
+        player.src = src;
+        dialog.showModal();
+        player.play().catch(function () {});
+      }
+
+      function closeClip() {
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+      }
+
+      document.querySelectorAll(".demo-thumb").forEach(function (button) {
+        button.addEventListener("click", function () { openClip(button); });
+      });
+      dialog.addEventListener("close", closeClip);
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="section-lead">One-time Mac App Store purchase. No subscription, no feature tiers.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Agent Butler Client</h3>
+          <p class="price">$19.99</p>
+          <p>Local currency at checkout. Charged once to your Apple Account. Restore on the same account.</p>
+          <ul>
+            <li>Butler &amp; Planning</li>
+            <li>Butler Claw · Tool Loop / Until Done</li>
+            <li>Auto Mode (Apple silicon + MLX)</li>
+            <li>Work Brief and live memory</li>
+            <li>Cloud API and on-device MLX / llama.cpp</li>
+            <li>Web search · sandboxed workspace</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Platforms</h3>
+          <p>iOS and macOS are available now. Windows and Linux are still on the way.</p>
+          <ul>
+            <li>iOS · Live</li>
+            <li>macOS · Live</li>
+            <li>Windows · Soon</li>
+            <li>Linux · Soon</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <p class="section-lead">Short answers about Agent Butler Client.</p>
+
+      <details class="faq">
+        <summary>What is it?</summary>
+        <p>A personalized AI assistant on macOS. Natural language becomes calendar items; confirmed jobs can edit files, write reports, and look up public pages. It is a native Mac app, not a command-line installer.</p>
+      </details>
+      <details class="faq">
+        <summary>How do I install it?</summary>
+        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode requires a loaded MLX model first.</p>
+      </details>
+      <details class="faq">
+        <summary>Which models?</summary>
+        <p>Cloud: Groq and OpenAI-compatible endpoints (Moonshot, Together, OpenRouter, DashScope, and others). Local: in-app MLX or llama.cpp via llama-server. Auto Mode is MLX only.</p>
+      </details>
+      <details class="faq">
+        <summary>Do Planning and Claw read Who I am?</summary>
+        <p>Yes. After you fill the two briefs, Planning, Butler Claw, and Auto Mode all receive those constraints. Closing the Work Brief window saves them.</p>
+      </details>
+      <details class="faq">
+        <summary>Can it run arbitrary terminal commands?</summary>
+        <p>No arbitrary shell. File tools stay in the sandbox and your chosen workspace. Developer mode in Butler Claw or Auto Butler can run an allowlisted subset (python3, pytest, swift, node, ruby, go) after you install a helper once. Other commands are copied for you to paste into Terminal.</p>
+      </details>
+      <details class="faq">
+        <summary>Is my data uploaded?</summary>
+        <p>On this Mac by default. Optional iCloud for calendar and chats. API keys, model weights, and workspace files stay local. Cloud models send prompts to the provider you choose.</p>
+      </details>
+      <details class="faq">
+        <summary>What does it cost?</summary>
+        <p>The app is $19.99 one-time (or the local App Store price). Cloud model cost is your API bill; on-device MLX has no extra model API fee.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Data Privacy</h2>
+      <p class="section-lead">Your calendar, chats, Work Brief, and workspace files stay on this Mac unless you turn on Sync iCloud. API keys stay in the Keychain.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>On this Mac</h3>
+          <p>Calendar, chat, Work Brief, window memories, and Butler Claw files are stored locally. Files in the folder you choose are not uploaded. API keys are never sent to iCloud or to our servers.</p>
+        </article>
+        <article class="card">
+          <h3>Cloud models</h3>
+          <p>If you use a cloud API, prompts go only to the provider you configure. On-device MLX stays on this Mac. Read the full <a href="privacy.html">Data Privacy</a> page for details.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Support</h2>
+      <p class="section-lead">Email a question or a bug. We typically reply in 2–3 business days. Setup notes are in Help.</p>
+      <a class="btn btn-dark" href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Agent Butler Client</span>
+      <div>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+        &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="support.html">Help</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
