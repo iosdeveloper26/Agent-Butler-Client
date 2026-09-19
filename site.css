@@ -99,7 +99,7 @@ img { max-width: 100%; }
 
 .hero {
   position: relative;
-  padding: 56px 0 32px;
+  padding: 120px 0 32px;
   text-align: center;
   overflow: hidden;
 }
@@ -107,7 +107,7 @@ img { max-width: 100%; }
   content: "";
   position: absolute;
   left: 50%;
-  top: 40px;
+  top: 104px;
   width: 420px;
   height: 180px;
   transform: translateX(-50%);
@@ -469,7 +469,7 @@ footer {
   .nav-links { display: none; }
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .step { grid-template-columns: 1fr; }
-  .hero { padding-top: 48px; }
+  .hero { padding-top: 80px; }
   .hero-brand { gap: 14px; }
 }
 @media (max-width: 720px) {
