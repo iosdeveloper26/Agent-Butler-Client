@@ -99,7 +99,7 @@ img { max-width: 100%; }
 
 .hero {
   position: relative;
-  padding: 72px 0 36px;
+  padding: 88px 0 48px;
   text-align: center;
   overflow: hidden;
 }
@@ -107,18 +107,21 @@ img { max-width: 100%; }
   content: "";
   position: absolute;
   left: 50%;
-  top: 28px;
-  width: 360px;
-  height: 220px;
+  top: 36px;
+  width: 280px;
+  height: 280px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, var(--glow), transparent 70%);
+  background: radial-gradient(circle, var(--glow), transparent 72%);
   pointer-events: none;
 }
-.mascot {
+.hero-mark {
   position: relative;
-  width: min(220px, 52vw);
-  margin: 0 auto 18px;
-  filter: drop-shadow(0 14px 28px rgba(27, 25, 22, 0.12));
+  display: block;
+  width: min(128px, 34vw);
+  height: auto;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  box-shadow: 0 16px 40px rgba(27, 25, 22, 0.14);
 }
 .kicker {
   display: inline-flex;
@@ -256,15 +259,23 @@ h2 {
   aspect-ratio: 1280 / 832;
 }
 
-.demo-features {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-.demo-feature {
+.demo-board {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+.demo-copy,
+.demo-videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+}
+.demo-feature,
+.demo-thumb {
+  flex: 1 1 0;
   min-width: 0;
 }
 .demo-feature h3 {
@@ -273,16 +284,14 @@ h2 {
   letter-spacing: -0.03em;
 }
 .demo-feature p {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
-  flex: 1 1 auto;
 }
 .demo-thumb {
+  appearance: none;
+  -webkit-appearance: none;
   display: block;
-  width: 100%;
-  min-width: 0;
-  margin-top: auto;
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -290,12 +299,14 @@ h2 {
   background: #111;
   cursor: zoom-in;
   position: relative;
+  font: inherit;
+  color: inherit;
+  text-align: left;
 }
 .demo-thumb img {
   display: block;
   width: 100%;
   max-width: 100%;
-  min-width: 0;
   height: auto;
   aspect-ratio: 1280 / 832;
   object-fit: cover;
@@ -448,6 +459,9 @@ footer {
   .step { grid-template-columns: 1fr; }
   .hero { padding-top: 48px; }
 }
-@media (max-width: 640px) {
-  .demo-features { grid-template-columns: 1fr; }
+@media (max-width: 720px) {
+  .demo-copy,
+  .demo-videos {
+    flex-direction: column;
+  }
 }
