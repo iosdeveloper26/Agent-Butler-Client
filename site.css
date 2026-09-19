@@ -107,29 +107,57 @@ img { max-width: 100%; }
   content: "";
   position: absolute;
   left: 50%;
-  top: 24px;
-  width: 160px;
-  height: 160px;
+  top: 40px;
+  width: 420px;
+  height: 180px;
   transform: translateX(-50%);
   background: radial-gradient(circle, var(--glow), transparent 72%);
   pointer-events: none;
 }
-.hero-mark {
+.hero-brand {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 0 auto 28px;
+  text-align: left;
+  width: fit-content;
+  max-width: 100%;
+}
+.hero-mark {
   display: block;
   width: 72px !important;
   height: 72px !important;
   max-width: 72px !important;
-  margin: 0 auto 24px;
+  margin: 0;
+  flex: 0 0 72px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 10px 24px rgba(27, 25, 22, 0.12);
+}
+.hero-name h1 {
+  position: relative;
+  margin: 0;
+  font-size: clamp(2.2rem, 5.4vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  color: var(--text);
+}
+.hero-name .tagline {
+  position: relative;
+  margin: 8px 0 0;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  color: var(--text);
+}
+.hero-name .kicker {
+  margin: 12px 0 0;
 }
 .kicker {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 16px;
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -137,21 +165,6 @@ img { max-width: 100%; }
   color: var(--accent-2);
   font-size: 0.78rem;
   letter-spacing: 0.02em;
-}
-.hero h1 {
-  position: relative;
-  margin: 0 0 14px;
-  font-size: clamp(2.4rem, 7vw, 4.4rem);
-  line-height: 1.05;
-  letter-spacing: -0.05em;
-  font-weight: 600;
-  color: var(--text);
-}
-.tagline {
-  position: relative;
-  margin: 0 0 12px;
-  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
-  color: var(--text);
 }
 .lede {
   position: relative;
@@ -460,6 +473,7 @@ footer {
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .step { grid-template-columns: 1fr; }
   .hero { padding-top: 48px; }
+  .hero-brand { gap: 14px; }
 }
 @media (max-width: 720px) {
   .demo-copy,
