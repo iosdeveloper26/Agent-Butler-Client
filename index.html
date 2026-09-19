@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=3">
+  <link rel="stylesheet" href="site.css?v=6">
 </head>
 <body>
   <nav class="nav">
@@ -40,19 +40,20 @@
         class="hero-mark"
         src="images/icon.png"
         alt=""
-        width="72"
-        height="72"
+        width="96"
+        height="96"
       >
       <div class="hero-name">
         <h1>Agent Butler</h1>
-        <p class="tagline">Your personalized AI assistant.</p>
-        <p class="kicker">macOS · calendar, chat, and files</p>
+        <p class="tagline">
+          Your personalized AI assistant.
+          <span class="kicker">macOS · calendar, chat, and files</span>
+        </p>
       </div>
     </div>
     <p class="lede">
-      Fill Who I am and Consider at work, then talk in natural language.
-      Planning, Butler Claw, and Auto Mode use that brief when they schedule, write files, and follow up.
-      Use a cloud API or on-device MLX. Your data stays on this Mac by default.
+      Fill Who I am and Consider at work, then talk in natural language.<br>
+      Planning, Butler Claw, and Auto Mode use that brief when they schedule, write files, and follow up—cloud API or on-device MLX.
     </p>
     <div class="actions">
       <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Get the app</a>
@@ -69,14 +70,14 @@
           <span class="step-n">01</span>
           <div>
             <h3>Install from the Mac App Store</h3>
-            <p>Apple silicon or Intel. Auto Mode needs on-device MLX on Apple silicon.</p>
+            <p>Apple silicon or Intel.</p>
           </div>
         </article>
         <article class="step">
           <span class="step-n">02</span>
           <div>
             <h3>Connect a model</h3>
-            <p>Paste a Groq or OpenAI-compatible key, or load MLX in-app / llama.cpp locally. Auto Mode is MLX-only.</p>
+            <p>Paste a Groq or OpenAI-compatible key, or load MLX in-app / llama.cpp locally. Auto Mode uses the same cloud API or on-device MLX.</p>
           </div>
         </article>
         <article class="step">
@@ -143,8 +144,8 @@
           <p>Attach files, set a deadline, approve the plan. PDF / Word / sheets / scripts return to the workspace. Due jobs run about 15 minutes before start.</p>
         </article>
         <article class="card">
-          <h3>Auto Mode · MLX only</h3>
-          <p>Its own window; scans the calendar about every 15 minutes. Never Groq or llama.cpp. Not available on Intel Macs.</p>
+          <h3>Auto Mode</h3>
+          <p>Its own window; scans the calendar about every 15 minutes. Uses your cloud API or on-device MLX.</p>
         </article>
       </div>
     </div>
@@ -268,7 +269,7 @@
           <ul>
             <li>Butler &amp; Planning</li>
             <li>Butler Claw · Tool Loop / Until Done</li>
-            <li>Auto Mode (Apple silicon + MLX)</li>
+            <li>Auto Mode (cloud API or MLX)</li>
             <li>Work Brief and live memory</li>
             <li>Cloud API and on-device MLX / llama.cpp</li>
             <li>Web search · sandboxed workspace</li>
@@ -299,11 +300,11 @@
       </details>
       <details class="faq">
         <summary>How do I install it?</summary>
-        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode requires a loaded MLX model first.</p>
+        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode can use either.</p>
       </details>
       <details class="faq">
         <summary>Which models?</summary>
-        <p>Cloud: Groq and OpenAI-compatible endpoints (Moonshot, Together, OpenRouter, DashScope, and others). Local: in-app MLX or llama.cpp via llama-server. Auto Mode is MLX only.</p>
+        <p>Cloud: Groq and OpenAI-compatible endpoints (Moonshot, Together, OpenRouter, DashScope, and others). Local: in-app MLX or llama.cpp via llama-server. Auto Mode uses the cloud API or on-device MLX.</p>
       </details>
       <details class="faq">
         <summary>Do Planning and Claw read Who I am?</summary>
