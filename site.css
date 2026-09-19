@@ -107,9 +107,9 @@ img { max-width: 100%; }
   content: "";
   position: absolute;
   left: 50%;
-  top: 36px;
-  width: 280px;
-  height: 280px;
+  top: 24px;
+  width: 160px;
+  height: 160px;
   transform: translateX(-50%);
   background: radial-gradient(circle, var(--glow), transparent 72%);
   pointer-events: none;
@@ -117,11 +117,13 @@ img { max-width: 100%; }
 .hero-mark {
   position: relative;
   display: block;
-  width: min(128px, 34vw);
-  height: auto;
-  margin: 0 auto 28px;
+  width: 72px;
+  height: 72px;
+  max-width: 72px;
+  margin: 0 auto 24px;
   border-radius: 50%;
-  box-shadow: 0 16px 40px rgba(27, 25, 22, 0.14);
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(27, 25, 22, 0.12);
 }
 .kicker {
   display: inline-flex;
