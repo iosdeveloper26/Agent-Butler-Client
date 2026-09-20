@@ -271,23 +271,77 @@ h2 {
   aspect-ratio: 1280 / 832;
 }
 
+.code-sample {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1b1916;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  aspect-ratio: 1280 / 832;
+}
+.code-sample-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #2a2622;
+  color: #f7f3ea;
+  font-size: 0.72rem;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+.code-sample-bar span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.code-sample-bar a {
+  color: #d7c7a8;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+.code-sample-bar a:hover {
+  color: #fff;
+}
+.code-sample pre {
+  margin: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 10px 12px 14px;
+}
+.code-sample code {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.64rem;
+  line-height: 1.45;
+  color: #f3efe6;
+  white-space: pre;
+}
+
 .demo-board {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+.demo-board + .demo-board {
+  margin-top: 36px;
+}
 .demo-copy,
 .demo-videos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: 18px;
   width: 100%;
 }
 .demo-feature,
 .demo-thumb {
-  flex: 1 1 0;
   min-width: 0;
 }
 .demo-feature h3 {
@@ -299,6 +353,11 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+.demo-feature .demo-model-note {
+  margin: 0 0 8px;
+  color: var(--accent-2);
+  font-weight: 600;
 }
 .demo-thumb {
   appearance: none;
@@ -322,6 +381,19 @@ h2 {
   height: auto;
   aspect-ratio: 1280 / 832;
   object-fit: cover;
+}
+.demo-thumb-badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.94);
+  color: var(--text);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 .demo-thumb-play {
   position: absolute;
@@ -475,6 +547,6 @@ footer {
 @media (max-width: 720px) {
   .demo-copy,
   .demo-videos {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
