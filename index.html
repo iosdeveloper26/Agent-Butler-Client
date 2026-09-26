@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=12">
+  <link rel="stylesheet" href="site.css?v=14">
 </head>
 <body>
   <nav class="nav">
@@ -24,6 +24,7 @@
         <a href="#demo">Demo</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
+        <a href="#safety">Safety</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Help</a>
         <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
@@ -35,6 +36,10 @@
   </nav>
 
   <header class="hero wrap">
+    <p class="product-status">
+      <span class="product-status-label">Early product</span>
+      <span class="product-status-copy">In active development. Available now, and still improving.</span>
+    </p>
     <div class="hero-brand">
       <img
         class="hero-mark"
@@ -52,8 +57,8 @@
       </div>
     </div>
     <p class="lede">
-      Fill Who I am and Consider at work, then talk in natural language.<br>
-      Planning, Butler Claw, and Auto Mode use that brief when they schedule, write files, and follow up—cloud API or on-device MLX.
+      Not just a multi-purpose AI assistant — a real helper at work.<br>
+      It can plan your tasks, and it can also finish PC-side jobs.
     </p>
     <div class="actions">
       <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Get the app</a>
@@ -1057,6 +1062,10 @@ Feel free to use this template for your personal homepage. No attribution requir
         <p>A personalized AI assistant on macOS. Natural language becomes calendar items; confirmed jobs can edit files, write reports, and look up public pages. It is a native Mac app, not a command-line installer.</p>
       </details>
       <details class="faq">
+        <summary>Is this an early product?</summary>
+        <p>Yes. Agent Butler Client is in active development: you can use it today on the Mac App Store, and we keep shipping refinements. Expect the product to grow; the core workflows are already here.</p>
+      </details>
+      <details class="faq">
         <summary>How do I install it?</summary>
         <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode can use either.</p>
       </details>
@@ -1080,6 +1089,10 @@ Feel free to use this template for your personal homepage. No attribution requir
         <summary>What does it cost?</summary>
         <p>The app is $19.99 one-time (or the local App Store price). Cloud model cost is your API bill; on-device MLX has no extra model API fee.</p>
       </details>
+      <details class="faq">
+        <summary>Should I trust every plan the AI writes?</summary>
+        <p>No. Treat plans and files as a draft. The model can miss details, and it only knows what you have shared. Review anything that matters before you act. See <a href="#safety">AI safety</a>.</p>
+      </details>
     </div>
   </section>
 
@@ -1100,6 +1113,23 @@ Feel free to use this template for your personal homepage. No attribution requir
     </div>
   </section>
 
+  <section id="safety">
+    <div class="wrap">
+      <h2>AI safety</h2>
+      <p class="section-lead">Use the assistant as a capable draft, not as the last word.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Plans can miss the mark</h3>
+          <p>AI has improved quickly, but it can still be wrong, incomplete, or too generic. It only knows what you put in the Work Brief and the conversation, so a plan may not fully match your situation.</p>
+        </article>
+        <article class="card">
+          <h3>You review what matters</h3>
+          <p>Treat schedules, documents, and code as a reference. For anything that affects your time, money, travel, health, or files you will send, check it yourself before you act.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <h2>Support</h2>
@@ -1113,6 +1143,8 @@ Feel free to use this template for your personal homepage. No attribution requir
       <span>Agent Butler Client</span>
       <div>
         <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+        &nbsp;·&nbsp;
+        <a href="#safety">Safety</a>
         &nbsp;·&nbsp;
         <a href="privacy.html">Privacy</a>
         &nbsp;·&nbsp;

@@ -805,6 +805,39 @@ body::before {
   background: linear-gradient(90deg, transparent, rgba(144, 176, 255, 0.5), transparent);
 }
 
+.product-status {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  max-width: 42rem;
+  margin: 0 auto 28px;
+  color: #9eacc4;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.product-status-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid rgba(156, 187, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(115, 151, 240, 0.1);
+  color: #c5d6ff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.product-status-copy {
+  color: #9eacc4;
+}
+
 .hero-brand {
   align-items: center;
   gap: 26px;
@@ -1182,6 +1215,8 @@ details.faq p {
 }
 
 #privacy a,
+#safety a,
+details.faq a,
 .prose a {
   color: #9fc0ff;
 }
