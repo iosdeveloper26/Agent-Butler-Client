@@ -334,6 +334,12 @@ h2 {
 .demo-board + .demo-board {
   margin-top: 36px;
 }
+.demo-version-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 .demo-version-label {
   margin: 0;
   color: var(--demo-version);
@@ -341,10 +347,24 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  flex: 0 0 auto;
+}
+.demo-version-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 .demo-copy-featured,
 .demo-videos-featured {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.demo-mail-follow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: calc((100% - 18px) / 2);
+  max-width: 100%;
 }
 .site-sample {
   margin: 0;
@@ -653,6 +673,9 @@ footer {
   .demo-copy-featured,
   .demo-videos-featured {
     grid-template-columns: 1fr;
+  }
+  .demo-mail-follow {
+    width: 100%;
   }
 }
 
@@ -1059,6 +1082,10 @@ h2 {
 .demo-feature p {
   color: var(--muted);
   line-height: 1.7;
+}
+
+.demo-feature p + p {
+  margin-top: 12px;
 }
 
 .demo-thumb,

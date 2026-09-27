@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=14">
+  <link rel="stylesheet" href="site.css?v=16">
 </head>
 <body>
   <nav class="nav">
@@ -68,8 +68,8 @@
 
   <section id="start">
     <div class="wrap">
-      <h2>Three steps to set your agent butler</h2>
-      <p class="section-lead">Supports API inference as well as local model inference & Personalized Agents.</p>
+      <h2>Three steps</h2>
+      <p class="section-lead">A native Mac app. One purchase unlocks every feature in the app.</p>
       <div class="steps">
         <article class="step">
           <span class="step-n">01</span>
@@ -82,7 +82,7 @@
           <span class="step-n">02</span>
           <div>
             <h3>Connect a model</h3>
-            <p>Paste a Claude or OpenAI-compatible key, or load MLX in-app / llama.cpp locally, or load custom server url. </p>
+            <p>Paste a Groq or OpenAI-compatible key, or load MLX in-app / llama.cpp locally. Auto Mode uses the same cloud API or on-device MLX.</p>
           </div>
         </article>
         <article class="step">
@@ -147,7 +147,10 @@
       <p class="section-lead">Walkthroughs of Butler Claw and Developer mode, plus short clips of planning, writing, and batch jobs. Click a clip to watch it larger.</p>
 
       <div class="demo-board">
-        <p class="demo-version-label">Earlier version</p>
+        <div class="demo-version-row">
+          <p class="demo-version-label">Earlier version</p>
+          <p class="demo-version-note">A task-planning assistant and the early automated assistant.</p>
+        </div>
         <div class="demo-copy">
           <article class="demo-feature">
             <h3>Planning</h3>
@@ -200,7 +203,10 @@
       </div>
 
       <div class="demo-board">
-        <p class="demo-version-label">Version 2.11</p>
+        <div class="demo-version-row">
+          <p class="demo-version-label">Version 2.11</p>
+          <p class="demo-version-note">The automated assistant is more complete, and its coding ability is stronger.</p>
+        </div>
         <div class="demo-copy">
           <article class="demo-feature">
             <h3>Register a file job, then let Auto Butler finish it</h3>
@@ -318,7 +324,10 @@ if __name__ == "__main__":
       </div>
 
       <div class="demo-board demo-board-featured">
-        <p class="demo-version-label">Version 2.12</p>
+        <div class="demo-version-row">
+          <p class="demo-version-label">Version 2.12</p>
+          <p class="demo-version-note">The automated assistant’s coding is complete, and remote control is starting to work.</p>
+        </div>
         <div class="demo-copy demo-copy-featured">
           <article class="demo-feature">
             <h3>Build a personal homepage in Developer mode</h3>
@@ -935,10 +944,31 @@ You can host this homepage on:
 Feel free to use this template for your personal homepage. No attribution required.</textarea>
           </div>
         </div>
+        <div class="demo-mail-follow">
+          <article class="demo-feature">
+            <h3>Mail Butler &amp; Mail Control Agent</h3>
+            <p>The app can handle mail. For ordinary mail, once you see the message in the app, you can use the LLM to draft a reply and send it. Mail registered as <code>[butler claw]</code> is added to the calendar when it arrives and becomes an executable task on this Mac. The app can therefore work as a mail butler, and you can control the app remotely by email.</p>
+            <p>The mail plugin supports iCloud through on-device IMAP with an Apple app-specific password, and Gmail and Outlook through a Nylas API key plus the mailbox app-specific password.</p>
+          </article>
+          <button
+            class="demo-thumb"
+            type="button"
+            data-demo-src="images/demo-mail.mp4"
+            data-demo-poster="images/demo-mail-poster.jpg"
+            data-demo-title="Mail Butler &amp; Mail Control Agent · 2.12"
+          >
+            <img src="images/demo-mail-poster.jpg" alt="Mail inbox, LLM reply, and Butler Claw registration">
+            <span class="demo-thumb-badge">2.12 · Mail</span>
+            <span class="demo-thumb-play" aria-hidden="true">Play</span>
+          </button>
+        </div>
       </div>
 
       <div class="demo-test-flow">
-        <p class="demo-version-label">Earlier version</p>
+        <div class="demo-version-row">
+          <p class="demo-version-label">Earlier version</p>
+          <p class="demo-version-note">A task-planning assistant and the early automated assistant.</p>
+        </div>
         <h3>Complete test flow</h3>
         <p>A full walkthrough from an earlier version, used to verify planning, file work, and the calendar in one sitting.</p>
         <div class="video-frame">
