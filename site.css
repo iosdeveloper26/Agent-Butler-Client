@@ -678,7 +678,6 @@ footer {
 .footer-inner a { text-decoration: none; }
 
 @media (max-width: 860px) {
-  .nav-links { display: none; }
   .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .step { grid-template-columns: 1fr; }
   .hero { padding-top: 80px; }
@@ -1283,8 +1282,29 @@ footer {
 }
 
 @media (max-width: 960px) {
+  .nav-inner {
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 2px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
   .nav-links {
-    display: none;
+    display: flex;
+    order: 3;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 16px;
+    width: 100%;
+    padding: 4px 0 8px;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    padding: 6px 0;
   }
 
   .hero {
