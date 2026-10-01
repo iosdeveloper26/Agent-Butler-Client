@@ -66,7 +66,8 @@ img { max-width: 100%; }
   color: var(--muted);
 }
 .nav-links a { text-decoration: none; }
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover,
+.nav-links a[aria-current="page"] { color: var(--text); }
 .nav-tools {
   display: flex;
   align-items: center;
@@ -464,6 +465,15 @@ h2 {
   font-size: 1.08rem;
   letter-spacing: -0.03em;
 }
+.demo-discuss-title {
+  align-items: baseline;
+}
+.demo-discuss-title h3 {
+  margin: 0;
+}
+.demo-discuss-body {
+  margin-top: 8px;
+}
 .demo-feature p {
   margin: 0;
   color: var(--muted);
@@ -769,7 +779,8 @@ body::before {
   transition: color 160ms ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
   color: #fff;
 }
 

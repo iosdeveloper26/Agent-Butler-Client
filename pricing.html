@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Help — Agent Butler Client</title>
+  <title>Pricing — Agent Butler Client</title>
+  <meta name="description" content="One-time Mac App Store purchase. No subscription, no feature tiers.">
   <link rel="icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +22,11 @@
         <a href="index.html">Start</a>
         <a href="capabilities.html">Capabilities</a>
         <a href="demos.html">Development log and demos</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
         <a href="faq.html">FAQ</a>
         <a href="safety.html">Safety</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html" aria-current="page">Help</a>
+        <a href="support.html">Help</a>
         <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
       </div>
       <div class="nav-tools">
@@ -34,32 +35,37 @@
     </div>
   </nav>
 
-  <main class="page wrap prose">
-    <h1>Help</h1>
-    <p>Setup notes, common questions, and a way to reach us.</p>
-
-    <h2>Contact</h2>
-    <p>Email a question, a help request, or a bug. We typically reply in 2–3 business days.</p>
-    <p><a href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a></p>
-
-    <h2>How do I set up a model?</h2>
-    <p>Settings → API. For cloud, enter Key, Base URL, and model, then Test Connection. For local, install MLX in-app or start llama-server. The composer toggles cloud / local.</p>
-
-    <h2>How does Work Brief work?</h2>
-    <p>Open You. Fill Who I am and Consider at work. Closing the window saves. Planning, Butler Claw, and Auto Mode all read it.</p>
-
-    <h2>Auto Mode will not start?</h2>
-    <p>Auto Mode needs a configured cloud API or a loaded MLX model. It does not use llama.cpp.</p>
-
-    <h2>How do I use Butler Claw?</h2>
-    <p>Switch to Butler Claw, attach files, describe the task and deadline, then confirm the plan onto the calendar. Turn on Tool Loop; choose Until Done to keep going until a deliverable. Writes stay in the sandbox and your chosen folder.</p>
-
-    <h2>Sync iCloud?</h2>
-    <p>Optional. Settings → Sync iCloud, then Sign in with Apple and upload. Keys, model weights, and workspace files are not uploaded.</p>
-
-    <h2>How do I erase local data?</h2>
-    <p>Settings → General → Erase Local Usage Data. This Mac only. It does not delete iCloud or sign you out.</p>
-  </main>
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="section-lead">One-time Mac App Store purchase. No subscription, no feature tiers.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Agent Butler Client</h3>
+          <p class="price">$19.99</p>
+          <p>Local currency at checkout. Charged once to your Apple Account. Restore on the same account.</p>
+          <ul>
+            <li>Butler &amp; Planning</li>
+            <li>Butler Claw · Tool Loop / Until Done</li>
+            <li>Auto Mode (cloud API or MLX)</li>
+            <li>Work Brief and live memory</li>
+            <li>Cloud API and on-device MLX / llama.cpp</li>
+            <li>Web search · sandboxed workspace</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Platforms</h3>
+          <p>iOS and macOS are available now. Windows and Linux are still on the way.</p>
+          <ul>
+            <li>iOS · Live</li>
+            <li>macOS · Live</li>
+            <li>Windows · Soon</li>
+            <li>Linux · Soon</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="wrap footer-inner">

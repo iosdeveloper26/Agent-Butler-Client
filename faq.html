@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ — Agent Butler Client</title>
+  <meta name="description" content="Short answers about Agent Butler Client.">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=20">
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="">
+        Agent Butler
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Start</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="demos.html">Development log and demos</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+        <a href="safety.html">Safety</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Help</a>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+      </div>
+      <div class="nav-tools">
+        <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Mac App Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>FAQ</h2>
+      <p class="section-lead">Short answers about Agent Butler Client.</p>
+
+      <details class="faq">
+        <summary>What is it?</summary>
+        <p>A personalized AI assistant on macOS. Natural language becomes calendar items; confirmed jobs can edit files, write reports, and look up public pages. It is a native Mac app, not a command-line installer.</p>
+      </details>
+      <details class="faq">
+        <summary>Is this an early product?</summary>
+        <p>Yes. Agent Butler Client is in active development: you can use it today on the Mac App Store, and we keep shipping refinements. Expect the product to grow; the core workflows are already here.</p>
+      </details>
+      <details class="faq">
+        <summary>How do I install it?</summary>
+        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode can use either.</p>
+      </details>
+      <details class="faq">
+        <summary>Which models?</summary>
+        <p>Cloud: Groq and OpenAI-compatible endpoints (Moonshot, Together, OpenRouter, DashScope, and others). Local: in-app MLX or llama.cpp via llama-server. Auto Mode uses the cloud API or on-device MLX.</p>
+      </details>
+      <details class="faq">
+        <summary>Do Planning and Claw read Who I am?</summary>
+        <p>Yes. After you fill the two briefs, Planning, Butler Claw, and Auto Mode all receive those constraints. Closing the Work Brief window saves them.</p>
+      </details>
+      <details class="faq">
+        <summary>Can it run arbitrary terminal commands?</summary>
+        <p>No arbitrary shell. File tools stay in the sandbox and your chosen workspace. Developer mode in Butler Claw or Auto Butler can run an allowlisted subset (python3, pytest, swift, node, ruby, go) after you install a helper once. Other commands are copied for you to paste into Terminal.</p>
+      </details>
+      <details class="faq">
+        <summary>Is my data uploaded?</summary>
+        <p>On this Mac by default. Optional iCloud for calendar and chats. API keys, model weights, and workspace files stay local. Cloud models send prompts to the provider you choose.</p>
+      </details>
+      <details class="faq">
+        <summary>What does it cost?</summary>
+        <p>The app is $19.99 one-time (or the local App Store price). Cloud model cost is your API bill; on-device MLX has no extra model API fee.</p>
+      </details>
+      <details class="faq">
+        <summary>Should I trust every plan the AI writes?</summary>
+        <p>No. Treat plans and files as a draft. The model can miss details, and it only knows what you have shared. Review anything that matters before you act. See <a href="safety.html">AI safety</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Agent Butler Client</span>
+      <div>
+        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+        &nbsp;·&nbsp;
+        <a href="safety.html">Safety</a>
+        &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy</a>
+        &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;·&nbsp;
+        <a href="support.html">Help</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
