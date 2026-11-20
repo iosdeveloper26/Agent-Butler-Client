@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=34">
+  <link rel="stylesheet" href="site.css?v=38">
 </head>
 <body>
   <nav class="nav">
@@ -39,7 +39,11 @@
     <div class="wrap">
       <h2>Development log &amp; videos</h2>
       <p class="section-lead">Newest first. Click a clip to watch it larger.</p>
-      <div class="yt-grid">
+      <form class="video-search" role="search">
+        <label for="video-search">Search</label>
+        <input id="video-search" type="search" placeholder="Search by title, date, or version" autocomplete="off">
+      </form>
+      <div class="yt-grid" id="video-grid">
         <article class="yt-card">
           <button class="demo-thumb" type="button" data-demo-src="images/demo-mcp-connect.mp4" data-demo-poster="images/demo-mcp-connect-poster.jpg" data-demo-title="External plugins through MCP">
             <img src="images/demo-mcp-connect-poster.jpg" alt="">
@@ -281,601 +285,8 @@
           </div>
         </article>
       </div>
-      <details class="yt-files">
-        <summary>Files from the homepage session</summary>
-        <div class="site-sample" id="site-sample">
-            <div class="code-sample-bar">
-              <span>site/</span>
-              <span class="site-sample-links">
-                <a href="files/site.zip" download>Download</a>
-              </span>
-            </div>
-            <div class="site-sample-tabs" role="tablist" aria-label="Generated site files">
-              <button type="button" role="tab" aria-selected="true" data-site-pane="preview">Preview</button>
-              <button type="button" role="tab" aria-selected="false" data-site-file="index.html">index.html</button>
-              <button type="button" role="tab" aria-selected="false" data-site-file="style.css">style.css</button>
-              <button type="button" role="tab" aria-selected="false" data-site-file="script.js">script.js</button>
-              <button type="button" role="tab" aria-selected="false" data-site-file="README.md">README.md</button>
-            </div>
-            <div class="site-preview" data-site-view="preview">
-              <iframe src="files/site/index.html" title="Generated personal homepage" loading="lazy" sandbox="allow-scripts"></iframe>
-            </div>
-            <pre class="site-source" data-site-view="source" hidden><code></code></pre>
-            <textarea hidden data-site-embed="index.html"><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Homepage</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="profile">
-                <img src="images/profile.jpg" alt="" class="profile-img" id="profileImg">
-                <h1 class="name">Your Name</h1>
-                <p class="bio">Software Developer | Open Source Enthusiast | Tech Writer</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <section class="about">
-                <h2>About Me</h2>
-                <p>Hello! I'm a passionate developer who loves creating innovative solutions and contributing to open source projects. I enjoy learning new technologies and sharing knowledge with the community.</p>
-            </section>
-
-            <section class="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">React</div>
-                    <div class="skill-item">Node.js</div>
-                    <div class="skill-item">Git</div>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project One</h3>
-                        <p>A brief description of your first project and what technologies you used.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Two</h3>
-                        <p>A brief description of your second project and what technologies you used.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project Three</h3>
-                        <p>A brief description of your third project and what technologies you used.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact">
-                <h2>Get In Touch</h2>
-                <div class="contact-links">
-                    <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" class="contact-link">LinkedIn</a>
-                    <a href="https://twitter.com/yourusername" class="contact-link">Twitter</a>
-                    <a href="mailto:your.email@example.com" class="contact-link">Email</a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html></textarea>
-            <textarea hidden data-site-embed="style.css">/* Color Scheme */
-:root {
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --bg-tertiary: #21262d;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --accent-color: #58a6ff;
-    --accent-hover: #1f6feb;
-    --border-color: #30363d;
-}
-
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-.header {
-    background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    padding: 60px 0;
-    text-align: center;
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid var(--border-color);
-    object-fit: cover;
-    background: var(--bg-tertiary);
-    font-size: 0;
-    color: transparent;
-    transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-}
-
-.name {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-.bio {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-}
-
-/* Main Content */
-.main {
-    padding: 60px 0;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
-}
-
-/* About Section */
-.about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    max-width: 800px;
-}
-
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.skill-item {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    padding: 15px 20px;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.skill-item:hover {
-    background-color: var(--bg-tertiary);
-    border-color: var(--accent-color);
-    transform: translateY(-2px);
-}
-
-/* Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.project-card {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 25px;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: var(--accent-color);
-}
-
-.project-card p {
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.project-link {
-    display: inline-block;
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
-}
-
-/* Contact Section */
-.contact-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.contact-link {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.contact-link:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-/* Footer */
-.footer {
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    padding: 30px 0;
-    text-align: center;
-    color: var(--text-secondary);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .name {
-        font-size: 2rem;
-    }
-    
-    .bio {
-        font-size: 1rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-links {
-        flex-direction: column;
-    }
-    
-    .contact-link {
-        text-align: center;
-    }
-}</textarea>
-            <textarea hidden data-site-embed="script.js">// Personal Homepage Script
-// This script handles smooth scrolling, animations, and interactive features
-
-(function() {
-    'use strict';
-
-    // Smooth scrolling for navigation links
-    function initSmoothScroll() {
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    }
-
-    // Animate elements on scroll
-    function initScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll('.project-card, .skill-item, .contact-link');
-        animatedElements.forEach(el => observer.observe(el));
-    }
-
-    // Add active state to navigation
-    function initNavigation() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-        function updateActiveNav() {
-            let currentSection = '';
-            const scrollPos = window.scrollY + 100;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + currentSection) {
-                    link.classList.add('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', updateActiveNav);
-        updateActiveNav();
-    }
-
-    // Initialize typing effect for hero section
-    function initTypingEffect() {
-        const typingElement = document.querySelector('.typing-text');
-        if (!typingElement) return;
-
-        const text = typingElement.textContent;
-        typingElement.textContent = '';
-        let index = 0;
-
-        function type() {
-            if (index < text.length) {
-                typingElement.textContent += text.charAt(index);
-                index++;
-                setTimeout(type, 100);
-            }
-        }
-
-        setTimeout(type, 500);
-    }
-
-    // Form validation (if contact form exists)
-    function initFormValidation() {
-        const form = document.querySelector('form');
-        if (!form) return;
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = form.querySelector('input[type="email"]');
-            const message = form.querySelector('textarea');
-            
-            if (email && !email.value.includes('@')) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            if (message && message.value.trim().length < 10) {
-                alert('Please enter a longer message');
-                return;
-            }
-
-            alert('Thank you for your message!');
-            form.reset();
-        });
-    }
-
-    // Mobile menu toggle
-    function initMobileMenu() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav ul');
-        
-        if (menuToggle && nav) {
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('show');
-                this.classList.toggle('active');
-            });
-        }
-    }
-
-    // Initialize all features when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-
-    function init() {
-        initSmoothScroll();
-        initScrollAnimations();
-        initNavigation();
-        initTypingEffect();
-        initFormValidation();
-        initMobileMenu();
-        console.log('Personal homepage initialized successfully');
-    }
-
-})();</textarea>
-            <textarea hidden data-site-embed="README.md"># Personal Homepage
-
-A clean, modern personal homepage inspired by GitHub's design aesthetic. This homepage is fully customizable and easy to maintain.
-
-## Features
-
-- Modern GitHub-style dark theme
-- Fully responsive design (mobile, tablet, desktop)
-- Smooth scrolling and animations
-- Easy to customize with your personal information
-- No external dependencies (pure HTML, CSS, JavaScript)
-
-## How to Customize
-
-### 1. Personal Information (index.html)
-
-Open `index.html` and update the following sections:
-
-**Profile Section:**
-- Replace `Your Name` with your actual name
-- Update the bio text with your own tagline
-- Change the profile image by adding your photo to the `images/` folder
-
-**About Section:**
-- Edit the paragraph to describe yourself and your interests
-
-**Skills Section:**
-- Modify the skill items to match your expertise
-- Add or remove skill items as needed
-
-**Projects Section:**
-- Update project titles, descriptions, and links
-- Add more project cards by copying the `.project-card` div structure
-
-**Contact Section:**
-- Replace placeholder URLs with your actual social media profiles
-- Update the email address with your contact email
-
-### 2. Profile Picture
-
-Place your profile picture in the `images/` folder and name it `profile.jpg` (or update the filename in `index.html`).
-
-### 3. Colors and Styling (css/style.css)
-
-To change the color scheme, modify the CSS variables at the top of `style.css`:
-
-```css
-:root {
-    --bg-primary: #0d1117;       /* Main background color */
-    --bg-secondary: #161b22;     /* Card background color */
-    --bg-tertiary: #21262d;      /* Hover state background */
-    --text-primary: #c9d1d9;     /* Main text color */
-    --text-secondary: #8b949e;   /* Secondary text color */
-    --accent-color: #58a6ff;     /* Links and highlights */
-    --accent-hover: #1f6feb;     /* Hover state for accents */
-    --border-color: #30363d;     /* Border color */
-}
-```
-
-### 4. Adding More Sections
-
-To add a new section, copy this template in `index.html`:
-
-```html
-<section class="your-section-name">
-    <h2>Section Title</h2>
-    <p>Your content here</p>
-</section>
-```
-
-## File Structure
-
-```
-sites/site/
-├── index.html          # Main HTML file
-├── css/
-│   ├── normalize.css   # CSS reset for cross-browser consistency
-│   └── style.css       # Main stylesheet
-├── js/
-│   └── script.js       # JavaScript for animations and interactions
-├── images/
-│   └── README.txt      # Instructions for adding images
-└── README.md           # This file
-```
-
-## Viewing Your Homepage
-
-Simply open `index.html` in any modern web browser to view your homepage locally.
-
-## Publishing Your Homepage
-
-You can host this homepage on:
-
-1. **GitHub Pages**: Push to a repository and enable GitHub Pages
-2. **Netlify**: Drag and drop the entire folder
-3. **Vercel**: Connect your repository
-4. **Any web hosting service**: Upload the files via FTP
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-Feel free to use this template for your personal homepage. No attribution required.</textarea>
-          </div>
-      </details>
+      <p class="video-empty" id="video-empty" hidden>No videos match that search.</p>
+      <nav class="video-pages" id="video-pages" aria-label="Video pages"></nav>
 
     </div>
   </section>
@@ -947,6 +358,60 @@ Feel free to use this template for your personal homepage. No attribution requir
           });
         });
       }
+    })();
+    (function () {
+      var grid = document.getElementById("video-grid");
+      var pages = document.getElementById("video-pages");
+      var empty = document.getElementById("video-empty");
+      var search = document.getElementById("video-search");
+      if (!grid || !pages || !search) return;
+      var pageSize = 6;
+      var page = 1;
+      var query = "";
+
+      function render() {
+        var cards = Array.prototype.slice.call(grid.querySelectorAll(".yt-card"));
+        var matched = cards.filter(function (card) {
+          return !query || card.textContent.toLowerCase().indexOf(query) !== -1;
+        });
+        var count = Math.max(1, Math.ceil(matched.length / pageSize));
+        if (matched.length === 0) count = 0;
+        if (page > count) page = count || 1;
+        cards.forEach(function (card) { card.hidden = true; });
+        matched.forEach(function (card, index) {
+          var start = (page - 1) * pageSize;
+          card.hidden = index < start || index >= start + pageSize;
+        });
+        if (empty) empty.hidden = matched.length !== 0;
+        pages.innerHTML = "";
+        pages.hidden = count < 1;
+        for (var n = 1; n <= count; n++) {
+          var button = document.createElement("button");
+          button.type = "button";
+          button.textContent = String(n);
+          button.setAttribute("aria-label", "Page " + n);
+          if (n === page) {
+            button.className = "is-current";
+            button.setAttribute("aria-current", "page");
+          }
+          button.addEventListener("click", function () {
+            page = Number(this.textContent);
+            render();
+            grid.scrollIntoView({ block: "start" });
+          });
+          pages.appendChild(button);
+        }
+      }
+
+      search.addEventListener("input", function () {
+        query = search.value.trim().toLowerCase();
+        page = 1;
+        render();
+      });
+      if (search.form) {
+        search.form.addEventListener("submit", function (event) { event.preventDefault(); });
+      }
+      render();
     })();
   </script>
 
