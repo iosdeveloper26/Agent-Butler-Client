@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=21">
+  <link rel="stylesheet" href="site.css?v=34">
 </head>
 <body>
   <nav class="nav">
@@ -20,12 +20,14 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Start</a>
-        <a href="demos.html">Development log and demos</a>
+        <div class="nav-drop">
+          <button class="nav-drop-label" type="button">Resource</button>
+          <div class="nav-sub">
+            <a href="demos.html">Development log &amp; videos</a>
+            <a href="docs.html">Documentation</a>
+          </div>
+        </div>
         <a href="pricing.html">Pricing</a>
-        <a href="faq.html" aria-current="page">FAQ</a>
-        <a href="safety.html">Safety</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Help</a>
       </div>
       <div class="nav-tools">
         <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
@@ -40,7 +42,7 @@
 
       <details class="faq">
         <summary>What is it?</summary>
-        <p>A personalized AI assistant on macOS. Natural language becomes calendar items; confirmed jobs can edit files, write reports, and look up public pages. It is a native Mac app, not a command-line installer.</p>
+        <p>A Mac assistant. Ask &amp; Do confirms a calendar card, Code &amp; Write runs in a folder you choose, and Multi-agent uses the roles already in the app. A named plugin is called from this chat.</p>
       </details>
       <details class="faq">
         <summary>Is this an early product?</summary>
@@ -48,19 +50,19 @@
       </details>
       <details class="faq">
         <summary>How do I install it?</summary>
-        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or install MLX. Auto Mode can use either.</p>
+        <p>Download it from the Mac App Store. In Settings → API, add a cloud key or use a local model.</p>
       </details>
       <details class="faq">
         <summary>Which models?</summary>
-        <p>Cloud: Groq and OpenAI-compatible endpoints (Moonshot, Together, OpenRouter, DashScope, and others). Local: in-app MLX or llama.cpp via llama-server. Auto Mode uses the cloud API or on-device MLX.</p>
+        <p>Use a cloud model you configure, or a local model on this Mac. A cloud model sends that turn to the provider you chose.</p>
       </details>
       <details class="faq">
-        <summary>Do Planning and Claw read Who I am?</summary>
-        <p>Yes. After you fill the two briefs, Planning, Butler Claw, and Auto Mode all receive those constraints. Closing the Work Brief window saves them.</p>
+        <summary>Does the Work Brief apply in every mode?</summary>
+        <p>Yes. After you save it, Ask &amp; Do, Code &amp; Write, and Multi-agent read the short summary.</p>
       </details>
       <details class="faq">
         <summary>Can it run arbitrary terminal commands?</summary>
-        <p>No arbitrary shell. File tools stay in the sandbox and your chosen workspace. Developer mode in Butler Claw or Auto Butler can run an allowlisted subset (python3, pytest, swift, node, ruby, go) after you install a helper once. Other commands are copied for you to paste into Terminal.</p>
+        <p>No. Work stays in the folder you choose. Installing the local runner asks you to confirm. The app does not open an unrestricted terminal.</p>
       </details>
       <details class="faq">
         <summary>Is my data uploaded?</summary>
@@ -68,7 +70,7 @@
       </details>
       <details class="faq">
         <summary>What does it cost?</summary>
-        <p>The app is $19.99 one-time (or the local App Store price). Cloud model cost is your API bill; on-device MLX has no extra model API fee.</p>
+        <p>Starter is $9 a month, Standard is $15 a month, and Scale is $30 a month. A cloud model is billed by the provider you choose.</p>
       </details>
       <details class="faq">
         <summary>Should I trust every plan the AI writes?</summary>
@@ -77,19 +79,41 @@
     </div>
   </section>
 
+  <section class="page-cta">
+    <div class="wrap">
+      <p>Say it. It finishes the work on your Mac.</p>
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+    </div>
+  </section>
+
   <footer>
-    <div class="wrap footer-inner">
-      <span>Agent Butler Client</span>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/icon.png" alt="">
+          Agent Butler
+        </a>
+        <p>Agent Butler finishes the work on your Mac and leaves the command and the result in the chat.</p>
+      </div>
       <div>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
-        &nbsp;·&nbsp;
+        <h2>Explore</h2>
+        <a href="index.html">Start</a>
+        <a href="demos.html">Development log &amp; videos</a>
+        <a href="docs.html">Documentation</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="faq.html" aria-current="page">FAQ</a>
         <a href="safety.html">Safety</a>
-        &nbsp;·&nbsp;
         <a href="privacy.html">Privacy</a>
-        &nbsp;·&nbsp;
-        <a href="terms.html">Terms</a>
-        &nbsp;·&nbsp;
         <a href="support.html">Help</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>No public phone line</p>
+        <p>No public email yet</p>
       </div>
     </div>
   </footer>

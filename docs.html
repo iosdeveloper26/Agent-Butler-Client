@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation — Agent Butler Client</title>
+  <meta name="description" content="How Agent Butler finishes work on this Mac: Ask &amp; Do, Code &amp; Write, Multi-agent, plugins, and where data stays.">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=34">
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="">
+        Agent Butler
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Start</a>
+        <div class="nav-drop">
+          <button class="nav-drop-label" type="button" aria-current="page">Resource</button>
+          <div class="nav-sub">
+            <a href="demos.html">Development log &amp; videos</a>
+            <a href="docs.html" aria-current="page">Documentation</a>
+          </div>
+        </div>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-tools">
+        <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="wrap docs-shell">
+      <aside class="docs-bookmarks" aria-label="On this page">
+        <p>Get started</p>
+        <a href="#models">Connect a model</a>
+        <a href="#settings">Settings</a>
+        <a href="#brief">Work Brief</a>
+        <a href="#first-task">The first task</a>
+        <p>Three ways to work</p>
+        <a href="#ask-and-do">Ask &amp; Do</a>
+        <a href="#code-and-write">Code &amp; Write</a>
+        <a href="#multi-agent">Multi-agent</a>
+        <p>Finish the work</p>
+        <a href="#extensions">Plugins</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#skills">Skills</a>
+        <a href="#web">Web</a>
+        <a href="#mail">Mail</a>
+        <p>Data</p>
+        <a href="#data">Where data stays</a>
+        <a href="#sync">Sync and backup</a>
+      </aside>
+      <div class="docs-main">
+      <h2>Documentation</h2>
+      <p class="section-lead">Finish the work on this Mac. Ask &amp; Do, Code &amp; Write, and Multi-agent stay in the same app.</p>
+
+      <div class="doc-group">
+        <h3>Get started</h3>
+        <div class="doc-grid">
+          <a class="doc-card" href="#models">
+            <img src="images/guide/cloud.png" alt="">
+            <div>
+              <h3>Connect a model</h3>
+              <p>Add a Cloud API in Settings, or use MLX or llama.cpp on this Mac. A cloud model sends that turn to the provider you configured.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#settings">
+            <img src="images/guide/gearshape.png" alt="">
+            <div>
+              <h3>Settings</h3>
+              <p>API, agent, mail, Work Brief, app settings, and iCloud sync. Each page does one job.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#brief">
+            <img src="images/guide/person_text_rectangle.png" alt="">
+            <div>
+              <h3>Work Brief</h3>
+              <p>Write who you are and what to consider at work. Later turns read the short summary.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#first-task">
+            <img src="images/guide/checklist.png" alt="">
+            <div>
+              <h3>The first task</h3>
+              <p>Say a time. Confirm the calendar card. Only then does the event get written.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="doc-group">
+        <h3>Three ways to work</h3>
+        <div class="doc-grid">
+          <a class="doc-card" href="#ask-and-do">
+            <img src="images/guide/bubble_left_and_bubble_right.png" alt="">
+            <div>
+              <h3>Ask &amp; Do</h3>
+              <p>Chat, look things up, and get work done. A specific time shows a confirmation card first. Text, voice, pictures, and files can go on the same message.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#code-and-write">
+            <img src="images/guide/terminal.png" alt="">
+            <div>
+              <h3>Code &amp; Write</h3>
+              <p>The same kind of code workflow as Codex and Claude Code, inside this app. Choose a folder. The command and the result come back in the chat.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#multi-agent">
+            <img src="images/guide/person_crop_circle.png" alt="">
+            <div>
+              <h3>Multi-agent</h3>
+              <p>Finish a job with the roles already in the app: Control, Sales, General Manager, CTO, Engineer, and others. You do not open a separate framework.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="doc-group">
+        <h3>Finish the work</h3>
+        <div class="doc-grid">
+          <a class="doc-card" href="#extensions">
+            <img src="images/guide/network.png" alt="">
+            <div>
+              <h3>Plugins</h3>
+              <p>Install and enable a plugin on the plugin page. Name it, and this app calls it. The reply is a console card in the chat.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#calendar">
+            <img src="images/guide/calendar.png" alt="">
+            <div>
+              <h3>Calendar</h3>
+              <p>Time and the task stay together. Confirm before a write. You can also add an event yourself, without the model.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#skills">
+            <img src="images/guide/book_pages_fill.png" alt="">
+            <div>
+              <h3>Skills</h3>
+              <p>Write the steps in a file and put it in a skills folder. A matching task reads that file.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#web">
+            <img src="images/guide/globe.png" alt="">
+            <div>
+              <h3>Web</h3>
+              <p>When it is on, the app searches public pages, then reads the ones it needs. Papers go through arXiv. Queries do not include local paths or secrets.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#mail">
+            <img src="images/guide/tray.png" alt="">
+            <div>
+              <h3>Mail</h3>
+              <p>Gmail and Outlook use Nylas. iCloud uses IMAP on this Mac. A reply is sent only after you agree.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="doc-group">
+        <h3>Data</h3>
+        <div class="doc-grid">
+          <a class="doc-card" href="#data">
+            <img src="images/guide/laptopcomputer.png" alt="">
+            <div>
+              <h3>Where data stays</h3>
+              <p>Secrets stay in the Keychain. Constraints from this conversation carry into the next turn. The app does not turn every file into a standing archive.</p>
+            </div>
+          </a>
+          <a class="doc-card" href="#sync">
+            <img src="images/guide/icloud_and_arrow_up.png" alt="">
+            <div>
+              <h3>Sync and backup</h3>
+              <p>After you sign in with Apple, upload and load are separate taps. Keys, model weights, and files in the working folder do not go to iCloud.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <article class="doc-article" id="models">
+        <h3><img src="images/guide/cloud.png" alt="">Connect a model</h3>
+        <p>Open Settings from the top right of the main window, then choose API on the left.</p>
+        <p>A Cloud API needs three things: a key, a base URL, and a model name. After you fill them in, test the connection. Create the key in that provider’s own console. The cloud / local control next to the input chooses which one this turn uses.</p>
+        <p>There are two local paths. On an Apple silicon Mac, MLX downloads and loads a model inside the app. llama.cpp needs you to start the local service yourself, then connect from the app. The app does not start that outside process for you.</p>
+        <p>A cloud model sends that turn to the provider you configured. The key stays on this Mac and is not written into the chat. Local model weights are not uploaded.</p>
+      </article>
+
+      <article class="doc-article" id="settings">
+        <h3><img src="images/guide/gearshape.png" alt="">Settings</h3>
+        <p>The left side has six pages:</p>
+        <ul>
+          <li>API: a cloud or local model.</li>
+          <li>Agent: the working folder, whether writing is allowed, and developer mode. Code &amp; Write uses this when it changes files and runs programs.</li>
+          <li>Mail: the mailbox connection and today’s inbox.</li>
+          <li>Work Brief: who you are, and what to keep in mind at work.</li>
+          <li>App: language, reminders, appearance, opening this guide again, and erasing local usage data.</li>
+          <li>iCloud sync: sign in, upload by hand, load by hand, and a local backup.</li>
+        </ul>
+        <p>The assistant control at the top right of the main window opens the Work Brief directly.</p>
+        <p>If Agent settings still shows an automatic calendar window, that window checks what is due. It is not a fourth chat mode.</p>
+      </article>
+
+      <article class="doc-article" id="brief">
+        <h3><img src="images/guide/person_text_rectangle.png" alt="">Work Brief</h3>
+        <p>“Who I am” is identity and routine. That original text is for you. “Consider at work” is what scheduling and tasks must respect.</p>
+        <p>Completing the brief compares what you already wrote with the recent conversation, appends facts you have said, and asks a few short questions for the rest. After you save and generate the summary, later turns read three short summaries. They do not paste the whole original into every turn.</p>
+        <p>Constraints you write in the current chat, such as “don’t”, “must”, “only use”, or “please use Chinese”, are carried into the next turn. This is not a personal archive that grows on its own.</p>
+      </article>
+
+      <article class="doc-article" id="first-task">
+        <h3><img src="images/guide/checklist.png" alt="">The first task</h3>
+        <p>After a model is connected, stay in Ask &amp; Do. Type “basketball at 9 in the morning.” A confirmation card appears in the chat first. The calendar changes only after you agree.</p>
+        <p>To write several items at once, wait until the reply already contains the plan, then use the to-do list. To add one item yourself, without the model, use Add on the main window.</p>
+        <p>Code &amp; Write and Multi-agent wait until the local runner is installed. Installation asks you to confirm.</p>
+      </article>
+
+      <article class="doc-article" id="ask-and-do">
+        <h3><img src="images/guide/bubble_left_and_bubble_right.png" alt="">Ask &amp; Do</h3>
+        <p>Ask &amp; Do is for chat, public lookup, and putting something on the calendar.</p>
+        <p>When you mention a specific time, a calendar confirmation card appears first. It is written only after you confirm. Hold to talk, and the text enters the field when you let go. Pictures, Word, PDF, and Excel can be attached to the same message.</p>
+        <p>With the web on, an answer searches public pages first. With it off, the reply uses only what the model already knows.</p>
+        <p>When you name a plugin that is installed and enabled, the call leaves from this same chat, and the result comes back here.</p>
+      </article>
+
+      <article class="doc-article" id="code-and-write">
+        <h3><img src="images/guide/terminal.png" alt="">Code &amp; Write</h3>
+        <p>Choose a folder first. Files are written in that directory.</p>
+        <p>It writes, runs, and brings the result back. The chat shows the command and the exit status. If the program writes a result file, the chat gives you that file.</p>
+        <p>The first time, install the local runner. Installation asks you to confirm. After developer mode is on, allowed programs can run in the working folder. The app does not run install scripts on its own, and it does not open an unrestricted terminal.</p>
+        <p>Code &amp; Write is not another IDE window. It stays in the same app as Ask &amp; Do and Multi-agent.</p>
+      </article>
+
+      <article class="doc-article" id="multi-agent">
+        <h3><img src="images/guide/person_crop_circle.png" alt="">Multi-agent</h3>
+        <p>The built-in roles are Control, Sales, General Manager, CTO, Engineer, Design, Marketing, Finance, Operations, and Research. You can also make a custom role from an existing one. The app writes a role card.</p>
+        <p>After you write the goal, Control assigns the work. You can talk to one role, or let the relevant roles work in the group chat. You do not switch apps to reach the assistant or Code &amp; Write.</p>
+        <p>These roles are not people. They do not sign, pay, or send contracts. This mode also waits until the local runner is installed.</p>
+      </article>
+
+      <article class="doc-article" id="extensions">
+        <h3><img src="images/guide/network.png" alt="">Plugins</h3>
+        <p>On the plugin page you can search, install, enable, and fill in an account. Installation asks you to confirm. The chat does not download a plugin by itself.</p>
+        <p>Say the plugin’s name in Ask &amp; Do, Code &amp; Write, or Multi-agent. All three use the same call.</p>
+        <p>If it is not installed, the chat tells you to install it on the plugin page. If it is disabled, enable it there first. If it needs an account, fill that in on the plugin page. The password goes to the Keychain and does not appear in the chat.</p>
+        <p>The reply is a console card: what was called, the exit status, and the output. A long reply scrolls inside the card. Listing tools is not a real call. After you say what to record or look up, you see that tool’s result.</p>
+        <p>Version 2.19 adds MCP control of external plugins, so the app can extend what it does. A plugin from the catalog still has to be installed and enabled before it runs.</p>
+      </article>
+
+      <article class="doc-article" id="calendar">
+        <h3><img src="images/guide/calendar.png" alt="">Calendar</h3>
+        <p>You can switch between the calendar view and the list. An item the model suggests appears as a confirmation card first. It is written only after you agree.</p>
+        <p>Add on the main window does not go through the model. Use it to add one item yourself. The record page shows to-dos, history, and counts.</p>
+      </article>
+
+      <article class="doc-article" id="skills">
+        <h3><img src="images/guide/book_pages_fill.png" alt="">Skills</h3>
+        <p>A skill is a file of steps, not a plugin. You can put one in three places:</p>
+        <ul>
+          <li>~/.agents/skills</li>
+          <li>.agents/skills in the current folder</li>
+          <li>~/AgentButler/skills</li>
+        </ul>
+        <p>The app reads one of them when the task matches. These are steps you wrote. They are not habits learned from every file on the Mac.</p>
+      </article>
+
+      <article class="doc-article" id="web">
+        <h3><img src="images/guide/globe.png" alt="">Web</h3>
+        <p>The globe on the composer decides whether this turn may use the web. Off means the reply uses only what the model already knows. On means the app searches first, reads the pages it needs, then answers.</p>
+        <p>Paper lookups go through arXiv. The query does not include a local path or a secret.</p>
+      </article>
+
+      <article class="doc-article" id="mail">
+        <h3><img src="images/guide/tray.png" alt="">Mail</h3>
+        <p>The mail page in Settings has two parts. Gmail and Outlook use Nylas: the full address, that provider’s app password, and a Nylas v3 API key. iCloud uses IMAP on this Mac: name@icloud.com plus an Apple app-specific password.</p>
+        <p>Today’s inbox lists the sender and a short summary. The model can draft a reply. It sends only after you edit it and agree. The app does not take over the whole mailbox.</p>
+      </article>
+
+      <article class="doc-article" id="data">
+        <h3><img src="images/guide/laptopcomputer.png" alt="">Where data stays</h3>
+        <p>A plugin secret stays in the Keychain and is handed to that plugin only while it runs. The chat and this guide do not show the secret.</p>
+        <p>Before a reply, the app picks a limited set from this conversation: what was said, pages used this time, commands that ran, files involved, and constraints you wrote. A short follow-up such as “this” or “continue” also keeps the last few lines. There is a cap. There is no vector index, and no second model scoring those lines.</p>
+        <p>Calendar events live in the system calendar. A plugin’s own database stays in that plugin’s folder. Skill files are instructions you placed there. None of those three is the excerpt taken from the chat.</p>
+        <p>A cloud model provider may keep the request under its own policy. That belongs in the provider’s notice, not as storage by this app.</p>
+        <p>Erase local usage data is in App settings. It clears usage on this Mac. It does not delete iCloud, and it does not sign you out. It cannot be undone.</p>
+      </article>
+
+      <article class="doc-article" id="sync">
+        <h3><img src="images/guide/icloud_and_arrow_up.png" alt="">Sync and backup</h3>
+        <p>Open Settings, then iCloud sync. Signing in with Apple only signs you in. Upload to iCloud and load from iCloud are each another tap. Sync writes to the iCloud account signed in on this Mac right now.</p>
+        <p>These do not upload: API keys, local model weights, and files in the working folder you chose.</p>
+        <p>The same page can export a .butlerpack, for another computer or for when you do not want to sign in with Apple. The backup has the Work Brief, window memory, calendar, and chats. It does not have secrets or model files. Restoring a backup replaces the brief on this Mac, and it asks again before it does.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-cta">
+    <div class="wrap">
+      <p>Say it. It finishes the work on your Mac.</p>
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/icon.png" alt="">
+          Agent Butler
+        </a>
+        <p>Agent Butler finishes the work on your Mac and leaves the command and the result in the chat.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="index.html">Start</a>
+        <a href="demos.html">Development log &amp; videos</a>
+        <a href="docs.html" aria-current="page">Documentation</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="faq.html">FAQ</a>
+        <a href="safety.html">Safety</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Help</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>No public phone line</p>
+        <p>No public email yet</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

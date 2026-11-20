@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=21">
+  <link rel="stylesheet" href="site.css?v=34">
 </head>
 <body>
   <nav class="nav">
@@ -19,13 +19,14 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Start</a>
-        <a href="demos.html">Development log and demos</a>
+        <div class="nav-drop">
+          <button class="nav-drop-label" type="button">Resource</button>
+          <div class="nav-sub">
+            <a href="demos.html">Development log &amp; videos</a>
+            <a href="docs.html">Documentation</a>
+          </div>
+        </div>
         <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="safety.html">Safety</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html" aria-current="page">Help</a>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
       </div>
     </div>
   </nav>
@@ -39,16 +40,16 @@
     <p><a href="mailto:service26_app@hotmail.com">service26_app@hotmail.com</a></p>
 
     <h2>How do I set up a model?</h2>
-    <p>Settings → API. For cloud, enter Key, Base URL, and model, then Test Connection. For local, install MLX in-app or start llama-server. The composer toggles cloud / local.</p>
+    <p>Settings → API. For a cloud model, enter the key, base URL, and model name, then test the connection. A local model can be loaded in the app. The composer chooses cloud or local for that turn.</p>
 
     <h2>How does Work Brief work?</h2>
-    <p>Open You. Fill Who I am and Consider at work. Closing the window saves. Planning, Butler Claw, and Auto Mode all read it.</p>
+    <p>Open the Work Brief. Fill in who you are and what to consider at work, then save. Ask &amp; Do, Code &amp; Write, and Multi-agent read the short summary.</p>
 
-    <h2>Auto Mode will not start?</h2>
-    <p>Auto Mode needs a configured cloud API or a loaded MLX model. It does not use llama.cpp.</p>
+    <h2>Code &amp; Write will not run?</h2>
+    <p>Connect a model first, choose a folder, and confirm when the app asks to install the local runner.</p>
 
-    <h2>How do I use Butler Claw?</h2>
-    <p>Switch to Butler Claw, attach files, describe the task and deadline, then confirm the plan onto the calendar. Turn on Tool Loop; choose Until Done to keep going until a deliverable. Writes stay in the sandbox and your chosen folder.</p>
+    <h2>How do I use Code &amp; Write?</h2>
+    <p>Choose a folder, describe the task, and read the command and the result in the chat. The app does not open an unrestricted terminal.</p>
 
     <h2>Sync iCloud?</h2>
     <p>Optional. Settings → Sync iCloud, then Sign in with Apple and upload. Keys, model weights, and workspace files are not uploaded.</p>
@@ -57,19 +58,41 @@
     <p>Settings → General → Erase Local Usage Data. This Mac only. It does not delete iCloud or sign you out.</p>
   </main>
 
+  <section class="page-cta">
+    <div class="wrap">
+      <p>Say it. It finishes the work on your Mac.</p>
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+    </div>
+  </section>
+
   <footer>
-    <div class="wrap footer-inner">
-      <span>Agent Butler Client</span>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/icon.png" alt="">
+          Agent Butler
+        </a>
+        <p>Agent Butler finishes the work on your Mac and leaves the command and the result in the chat.</p>
+      </div>
       <div>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
-        &nbsp;·&nbsp;
+        <h2>Explore</h2>
+        <a href="index.html">Start</a>
+        <a href="demos.html">Development log &amp; videos</a>
+        <a href="docs.html">Documentation</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="faq.html">FAQ</a>
         <a href="safety.html">Safety</a>
-        &nbsp;·&nbsp;
         <a href="privacy.html">Privacy</a>
-        &nbsp;·&nbsp;
+        <a href="support.html" aria-current="page">Help</a>
         <a href="terms.html">Terms</a>
-        &nbsp;·&nbsp;
-        <a href="support.html">Help</a>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>No public phone line</p>
+        <p>No public email yet</p>
       </div>
     </div>
   </footer>

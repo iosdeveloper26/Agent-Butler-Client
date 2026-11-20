@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=21">
+  <link rel="stylesheet" href="site.css?v=34">
 </head>
 <body>
   <nav class="nav">
@@ -20,14 +20,14 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Start</a>
-        <a href="capabilities.html" aria-current="page">Capabilities</a>
-        <a href="demos.html">Development log and demos</a>
+        <div class="nav-drop">
+          <button class="nav-drop-label" type="button" aria-current="page">Resource</button>
+          <div class="nav-sub">
+            <a href="demos.html">Development log &amp; videos</a>
+            <a href="docs.html">Documentation</a>
+          </div>
+        </div>
         <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="safety.html">Safety</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Help</a>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
       </div>
 
     </div>
@@ -59,38 +59,60 @@
 
   <section id="modes">
     <div class="wrap">
-      <h2>Planning · Claw · Auto</h2>
-      <p class="section-lead">One Work Brief. Three tempos.</p>
+      <h2>Ask &amp; Do · Code &amp; Write · Multi-agent</h2>
+      <p class="section-lead">One Work Brief. Three ways to work, in the same app.</p>
       <div class="grid-3">
         <article class="card">
-          <h3>Butler &amp; Planning</h3>
-          <p>Natural-language chat, attachments, batch plans. “Basketball at 9am” gets a confirmation card; finished plans can land on the calendar.</p>
+          <h3>Ask &amp; Do</h3>
+          <p>Chat, files, and plans. A time such as “basketball at 9am” shows a confirmation card. The calendar changes after you agree.</p>
         </article>
         <article class="card">
-          <h3>Butler Claw</h3>
-          <p>Attach files, set a deadline, approve the plan. PDF / Word / sheets / scripts return to the workspace. Due jobs run about 15 minutes before start.</p>
+          <h3>Code &amp; Write</h3>
+          <p>Choose a folder. The app writes there, runs the work, and brings the command and the result back to the chat.</p>
         </article>
         <article class="card">
-          <h3>Auto Mode</h3>
-          <p>Its own window; scans the calendar about every 15 minutes. Uses your cloud API or on-device MLX.</p>
+          <h3>Multi-agent</h3>
+          <p>Use the roles already in the app, or add one of your own. They stay in this window. They do not sign, pay, or send contracts.</p>
         </article>
       </div>
     </div>
   </section>
 
+  <section class="page-cta">
+    <div class="wrap">
+      <p>Say it. It finishes the work on your Mac.</p>
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
+    </div>
+  </section>
+
   <footer>
-    <div class="wrap footer-inner">
-      <span>Agent Butler Client</span>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/icon.png" alt="">
+          Agent Butler
+        </a>
+        <p>Agent Butler finishes the work on your Mac and leaves the command and the result in the chat.</p>
+      </div>
       <div>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
-        &nbsp;·&nbsp;
+        <h2>Explore</h2>
+        <a href="index.html">Start</a>
+        <a href="demos.html">Development log &amp; videos</a>
+        <a href="docs.html">Documentation</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="faq.html">FAQ</a>
         <a href="safety.html">Safety</a>
-        &nbsp;·&nbsp;
         <a href="privacy.html">Privacy</a>
-        &nbsp;·&nbsp;
-        <a href="terms.html">Terms</a>
-        &nbsp;·&nbsp;
         <a href="support.html">Help</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>No public phone line</p>
+        <p>No public email yet</p>
       </div>
     </div>
   </footer>

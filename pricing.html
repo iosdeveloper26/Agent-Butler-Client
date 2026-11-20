@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pricing — Agent Butler Client</title>
-  <meta name="description" content="One-time Mac App Store purchase. No subscription, no feature tiers.">
+  <meta name="description" content="Starter $9, Standard $15, and Scale $30 a month.">
   <link rel="icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=21">
+  <link rel="stylesheet" href="site.css?v=34">
 </head>
 <body>
   <nav class="nav">
@@ -20,12 +20,14 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Start</a>
-        <a href="demos.html">Development log and demos</a>
+        <div class="nav-drop">
+          <button class="nav-drop-label" type="button">Resource</button>
+          <div class="nav-sub">
+            <a href="demos.html">Development log &amp; videos</a>
+            <a href="docs.html">Documentation</a>
+          </div>
+        </div>
         <a href="pricing.html" aria-current="page">Pricing</a>
-        <a href="faq.html">FAQ</a>
-        <a href="safety.html">Safety</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Help</a>
       </div>
       <div class="nav-tools">
         <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
@@ -36,77 +38,87 @@
   <section id="pricing">
     <div class="wrap">
       <h2>Pricing</h2>
-
-      <div class="grid-2">
+      <p class="section-lead">Three monthly plans. Each one includes the plan below it.</p>
+      <div class="grid-3">
         <article class="card">
-          <h3>Agent Butler Client (Beta Version)</h3>
-          <p class="price">$19.99 for beta version</p>
-          <p>Local currency at checkout. Charged once to your Apple Account. Restore on the same account.</p>
+          <h3>Starter</h3>
+          <p>Conversation, and plugins through MCP.</p>
+          <p class="price">$9<span>/month</span></p>
           <ul>
-            <li>Butler &amp; Planning</li>
-            <li>Butler Claw · Tool Loop / Until Done</li>
-            <li>Auto Mode (cloud API or MLX)</li>
-            <li>Work Brief and live memory</li>
-            <li>Cloud API and on-device MLX / llama.cpp</li>
-            <li>Web search · sandboxed workspace</li>
+            <li>Everyday conversation in Ask &amp; Do</li>
+            <li>MCP connections to external plugins</li>
+            <li>A calendar card before anything is written</li>
           </ul>
         </article>
         <article class="card">
-          <h3>Agent Butler Client (Formal Version, basic Plan)</h3>
-          <p class="price">$6/month for basic Plan</p>
+          <h3>Standard</h3>
+          <p>The coding harness and multi-agent, with everything in Starter.</p>
+          <p class="price">$15<span>/month</span></p>
           <ul>
-            <li>Butler &amp; Planning</li>
-            <li>Peronalized Agent: Work Brief and live memory</li>
-            <li>New Butler Claw: harness code/Github manangement/CAD/IDE/Agent assistant Debug/Doucement Writing.....</li>
-            <li>Cloud API and on-device MLX / llama.cpp</li>
+            <li>Everything in Starter</li>
+            <li>The coding harness in a folder you choose</li>
+            <li>Multi-agent roles already in the app</li>
           </ul>
         </article>
-        </article>
         <article class="card">
-          <h3>Agent Butler Client (Formal Version, pro Plan)</h3>
-          <p class="price">$15/month for Pro Plan</p>
+          <h3>Scale</h3>
+          <p>An open agent team, and harnesses mixed with MCP.</p>
+          <p class="price">$30<span>/month</span></p>
           <ul>
-            <li>All features in basic Plan</li>
-            <li>Multi-agent colloboration</li>
-            <li>In-sandbox app operation</li>
-            <li>Advanced long-horizon workflow for students and programers</li>
+            <li>Everything in Standard</li>
+            <li>An open autonomous chat for an agent team</li>
+            <li>Mixing different harnesses with MCP</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
-        
-        
-<section id="Platform">
-  <div class="wrap">
-    <h2>Platform</h2>
-        <article class="card">
-          <h3>Platforms</h3>
-          <p>iOS and macOS are available now. Windows and Linux are still on the way.</p>
-          <ul>
-            <li>iOS · Live but outdate</li>
-            <li>macOS · Live</li>
-            <li>Windows · Todo</li>
-            <li>Linux · Todo</li>
-          </ul>
-        </article>
-      </div>
+
+  <section id="platform">
+    <div class="wrap">
+      <h2>Platform</h2>
+      <article class="card">
+        <h3>macOS</h3>
+        <p>Agent Butler Client is a Mac app. Download it from the Mac App Store.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="page-cta">
+    <div class="wrap">
+      <p>Say it. It finishes the work on your Mac.</p>
+      <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
     </div>
   </section>
 
   <footer>
-    <div class="wrap footer-inner">
-      <span>Agent Butler Client</span>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="images/icon.png" alt="">
+          Agent Butler
+        </a>
+        <p>Agent Butler finishes the work on your Mac and leaves the command and the result in the chat.</p>
+      </div>
       <div>
-        <a href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download</a>
-        &nbsp;·&nbsp;
+        <h2>Explore</h2>
+        <a href="index.html">Start</a>
+        <a href="demos.html">Development log &amp; videos</a>
+        <a href="docs.html">Documentation</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <a href="faq.html">FAQ</a>
         <a href="safety.html">Safety</a>
-        &nbsp;·&nbsp;
         <a href="privacy.html">Privacy</a>
-        &nbsp;·&nbsp;
-        <a href="terms.html">Terms</a>
-        &nbsp;·&nbsp;
         <a href="support.html">Help</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>No public phone line</p>
+        <p>No public email yet</p>
       </div>
     </div>
   </footer>
