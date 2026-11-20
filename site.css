@@ -956,6 +956,10 @@ h2 {
   line-height: 1.72;
 }
 
+.section-lead a {
+  color: #9fc0ff;
+}
+
 .steps {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -1513,6 +1517,15 @@ footer {
   position: relative;
 }
 
+.nav-drop::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 260px;
+  height: 20px;
+}
+
 .nav-drop-label {
   appearance: none;
   background: none;
@@ -1545,7 +1558,7 @@ footer {
 .nav-sub {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 8px);
   left: 0;
   min-width: 250px;
   padding: 8px;
@@ -1903,6 +1916,67 @@ footer {
     margin-top: 24px;
     margin-bottom: 36px;
   }
+}
+
+.video-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 18px;
+}
+
+.video-search label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.video-search input {
+  width: min(420px, 100%);
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(173, 195, 234, 0.28);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f7ff;
+  font: inherit;
+}
+
+.video-search input:focus {
+  outline: 2px solid rgba(154, 184, 255, 0.7);
+  outline-offset: 2px;
+}
+
+.video-empty {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.video-pages {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 28px 0 8px;
+}
+
+.video-pages button {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #c5d0e0;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.video-pages button.is-current {
+  color: #fff;
+  font-weight: 700;
+}
+
+.video-pages button:hover {
+  color: #fff;
 }
 
 .yt-grid {
