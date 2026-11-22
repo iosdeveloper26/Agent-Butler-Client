@@ -5,37 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agent Butler Client</title>
   <meta name="description" content="Your personalized agent assistant for macOS. Plan the calendar, run file tasks, and keep Who I am / Consider at work in every mode.">
-  <link rel="icon" href="images/icon.png?v=22">
+  <link rel="icon" href="images/icon.png?v=27">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=38">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,560&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=83">
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/icon.png?v=22" alt="">
         Agent Butler
       </a>
       <div class="nav-links">
         <a href="index.html" aria-current="page">Start</a>
-        <div class="nav-drop">
-          <button class="nav-drop-label" type="button">Resource</button>
-          <div class="nav-sub">
-            <a href="demos.html">Development log &amp; videos</a>
-            <a href="docs.html">Documentation</a>
-          </div>
-        </div>
+        <a href="install.html">Install</a>
+        <a href="docs.html">Documentation</a>
         <a href="pricing.html">Pricing</a>
-      </div>
-      <div class="nav-tools">
-        <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
       </div>
     </div>
   </nav>
 
   <header class="hero wrap">
+    <div class="hero-plate">
     <p class="product-status">
       <span class="product-status-label">Early product</span>
       <span class="product-status-copy">In active development. Available now, and still improving.</span>
@@ -43,7 +35,7 @@
     <div class="hero-brand">
       <img
         class="hero-mark"
-        src="images/icon.png?v=22"
+        src="images/icon.png?v=27"
         alt=""
         width="96"
         height="96"
@@ -59,194 +51,107 @@
     <p class="lede">
       Not just a harness, it's your personal assistant. Integrated friendly UI with more than 5 scalable features, MCP, harness, plugin expansion, and pre-set workflows.
     </p>
+    </div>
     <div class="actions">
       <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Get the Beta 2.15</a>
       <a class="btn btn-ghost" href="demos.html">Watch a session</a>
       <a class="btn btn-ghost" href="docs.html">Watch doc</a>
     </div>
-    <figure class="product-shot" id="product-shot">
-      <div class="product-frame">
-        <img id="product-slide" src="images/web/01-extensions.png" alt="Extensions, with plugins installed through MCP">
-        <button class="product-nav product-prev" type="button" aria-label="Previous image"></button>
-        <button class="product-nav product-next" type="button" aria-label="Next image"></button>
-      </div>
-      <div class="product-dots" role="tablist" aria-label="Product images">
-        <button type="button" class="is-on" aria-label="Image 1 of 4" aria-selected="true"></button>
-        <button type="button" aria-label="Image 2 of 4" aria-selected="false"></button>
-        <button type="button" aria-label="Image 3 of 4" aria-selected="false"></button>
-        <button type="button" aria-label="Image 4 of 4" aria-selected="false"></button>
-      </div>
-    </figure>
+  </header>
+
+  <div class="page-rail">
     <section class="latest-news" aria-labelledby="latest-news-title">
-      <h2 id="latest-news-title">Latest news</h2>
-      <ol class="news-list is-collapsed" id="news-list">
+      <div class="wrap">
+      <h2 class="section-kicker" id="latest-news-title">Latest news</h2>
+      <ol class="news-list" id="news-list">
         <li>
           <a href="demos.html">
-            <span class="news-meta">
-              <span class="news-version">Version 2.19 (beta)</span>
-              <time datetime="2026-11-20">November 20, 2026</time>
-            </span>
-            <span class="news-title">Agent Butler has added the ability to control external plugins through MCP, allowing the app to extend its functionality</span>
+            <time datetime="2026-11-20"><span class="news-month">November</span><span class="news-day">20,</span><span class="news-year">2026</span></time>
+            <span class="news-title"><span class="news-version">[2.19 beta]</span>Agent Butler has added the ability to control external plugins through MCP, allowing the app to extend its functionality</span>
           </a>
         </li>
         <li>
           <a href="demos.html">
-            <span class="news-meta">
-              <span class="news-version">Version 2.18 (beta)</span>
-              <time datetime="2026-11-04">November 4, 2026</time>
-            </span>
-            <span class="news-title">Layered agent workflow: coding with multiple agents that split program development and carry it out together</span>
+            <time datetime="2026-11-04"><span class="news-month">November</span><span class="news-day">4,</span><span class="news-year">2026</span></time>
+            <span class="news-title"><span class="news-version">[2.18 beta]</span>Layered agent workflow: coding with multiple agents that split program development and carry it out together</span>
           </a>
         </li>
         <li>
           <a href="https://github.com/iosdeveloper26/html_apps">
-            <span class="news-meta">
-              <span class="news-version">Version 2.17 (beta)</span>
-              <time datetime="2026-10-21">October 26, 2026</time>
-            </span>
-            <span class="news-title">We release a Github Project that will have many apps generated by Agent Butler, also merge/coding are all did by Agent Butler. This project will be continuely updated.</span>
+            <time datetime="2026-10-26"><span class="news-month">October</span><span class="news-day">26,</span><span class="news-year">2026</span></time>
+            <span class="news-title"><span class="news-version">[2.17 beta]</span>We release a Github Project that will have many apps generated by Agent Butler, also merge/coding are all did by Agent Butler. This project will be continuely updated.</span>
           </a>
         </li>
-        <li class="news-more">
+        <li>
           <a href="demos.html">
-            <span class="news-meta">
-              <span class="news-version">Version 2.17 (beta)</span>
-              <time datetime="2026-10-21">October 21, 2026</time>
-            </span>
-            <span class="news-title">One-click git setup: configure git from the chat, create a same-named GitHub project, and merge local files</span>
+            <time datetime="2026-10-21"><span class="news-month">October</span><span class="news-day">21,</span><span class="news-year">2026</span></time>
+            <span class="news-title"><span class="news-version">[2.17 beta]</span>One-click git setup: configure git from the chat, create a same-named GitHub project, and merge local files</span>
           </a>
         </li>
-        <li class="news-more">
+        <li>
           <a href="demos.html">
-            <span class="news-meta">
-              <span class="news-version">Version 2.16 (beta)</span>
-              <time datetime="2026-10-13">October 13, 2026</time>
-            </span>
-            <span class="news-title">An in-app preview for code, PDF, and CAD, with one-click debug</span>
-          </a>
-        </li>
-        <li class="news-more">
-          <a href="demos.html">
-            <span class="news-meta">
-              <span class="news-version">Version 2.16 (beta)</span>
-              <time datetime="2026-10-09">October 9, 2026</time>
-            </span>
-            <span class="news-title">Initializing the multi-agent collaboration system</span>
+            <time datetime="2026-10-13"><span class="news-month">October</span><span class="news-day">13,</span><span class="news-year">2026</span></time>
+            <span class="news-title"><span class="news-version">[2.16 beta]</span>An in-app preview for code, PDF, and CAD, with one-click debug</span>
           </a>
         </li>
       </ol>
-      <button class="news-toggle" type="button" id="news-toggle" aria-expanded="false" aria-controls="news-list">Show all news</button>
+      </div>
     </section>
-  </header>
+
+    <section class="mode-preview" aria-labelledby="mode-preview-title">
+      <div class="wrap">
+        <h2 class="section-kicker" id="mode-preview-title">UI preview &amp; mode introduction</h2>
+        <div class="mode-layout">
+          <figure class="product-shot" id="product-shot">
+            <div class="product-frame">
+              <div class="product-stage">
+                <img class="is-on" id="product-slide" src="images/web/01-extensions.png" alt="Ask &amp; Do, with a conversation and built-in MCP tools">
+              </div>
+              <button class="product-nav product-prev" type="button" aria-label="Previous mode"></button>
+              <button class="product-nav product-next" type="button" aria-label="Next mode"></button>
+              <button class="product-zoom" type="button" aria-label="View larger">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.2 10.2 13.2 13.2M9.2 7H4.8M7 4.8v4.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </button>
+            </div>
+            <div class="product-dots" role="tablist" aria-label="Modes">
+              <button type="button" class="is-on" aria-label="Ask &amp; Do" aria-selected="true"></button>
+              <button type="button" aria-label="Code &amp; Write" aria-selected="false"></button>
+              <button type="button" aria-label="Multi-agent" aria-selected="false"></button>
+              <button type="button" aria-label="Open team" aria-selected="false"></button>
+            </div>
+          </figure>
+          <dialog class="product-lightbox" id="product-lightbox">
+            <button class="product-lightbox-close" type="button" aria-label="Close">Close</button>
+            <img alt="">
+          </dialog>
+          <div class="mode-copy">
+            <p class="mode-plan" id="mode-plan">Starter</p>
+            <h3 id="mode-title">Ask &amp; Do</h3>
+            <p id="mode-text">Ask &amp; Do is included in Starter. In one sentence, it is your assistant. In this mode you hold an ordinary conversation with the agent. You can also call the built-in MCP tools for basic file editing, and for work in external apps and plugins. Several workflows are already here, including goal-oriented planning, so a task is easier to lay out.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <section id="capabilities">
     <div class="wrap">
-      <h2>What it can do</h2>
-      <div class="ability-intro">
-        <div class="ability-copy">
-          <p>Agent Butler fits the goals of different people. Everyday users can plan the day and ask questions. Professionals and students can use the simple UI to manage plugins and skills, and extend what Agent Butler can do.</p>
-          <p>Agent Butler also includes its own MCP and harness, so there is more than one way to reach a goal.</p>
+      <h2 class="section-kicker">What it can do</h2>
+      <div class="dial" id="feature-dial">
+        <div class="dial-detail">
+          <h3 id="dial-title">Daily questions</h3>
+          <div id="dial-copy">
+            <p>Ask in the same chat: type, attach a picture or a file, or hold to talk. Calendar and mail are part of this daily work.</p>
+            <p>Calendar. A time such as “basketball at 9am” shows a confirmation card first. The event is written only after you agree. Add on the main window puts one event on the calendar without the model. <a href="docs.html#calendar">Calendar</a> · <a href="images/demo-batch-tasks.mp4">Watch</a></p>
+            <p>Mail. Gmail and Outlook connect through Nylas. iCloud uses IMAP on this Mac. Today’s inbox lists the sender and a short summary. The model can draft a reply, and it sends only after you edit it and agree. <a href="docs.html#mail">Mail</a> · <a href="images/demo-mail.mp4">Watch</a></p>
+          </div>
         </div>
-        <figure class="ability-map">
-          <img src="images/ability-map.png?v=5" alt="Ask and Do, Code and Write, Multi-agent, and extensions around the Agent Butler icon">
-        </figure>
-      </div>
-      <div class="feature-list is-collapsed" id="feature-list">
-        <article class="feature-row">
-          <div class="feature-copy">
-            <h3>A plan you can follow</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-planning.mp4" poster="images/demo-planning-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row">
-          <div class="feature-copy">
-            <h3>Jobs on the calendar</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-batch-tasks.mp4" poster="images/demo-batch-tasks-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Code in a folder you choose</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-developer-homepage.mp4" poster="images/demo-developer-homepage-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Git from the chat</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-git-setup.mp4" poster="images/demo-git-setup-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Preview in the app</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-butler-claw-ide.mp4" poster="images/demo-butler-claw-ide-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Mail drafts</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-mail.mp4" poster="images/demo-mail-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Multi-agent</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-agent-discussion.mp4" poster="images/demo-agent-discussion-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-        <article class="feature-row feature-more">
-          <div class="feature-copy">
-            <h3>Plugins through MCP</h3>
-          </div>
-          <div class="feature-video">
-            <video src="images/demo-mcp-connect.mp4" poster="images/demo-mcp-connect-poster.jpg" controls playsinline preload="none"></video>
-          </div>
-        </article>
-      </div>
-      <button class="news-toggle" type="button" id="feature-toggle" aria-expanded="false" aria-controls="feature-list">Show all videos</button>
-    </div>
-  </section>
-
-  <section id="start">
-    <div class="wrap">
-      <h2>Three steps to use</h2>
-      <p class="section-lead">Read the <a href="docs.html">documentation</a> for a more detailed guide.</p>
-      <div class="steps">
-        <article class="step">
-          <span class="step-n">01</span>
-          <div>
-            <h3>Install from the Mac App Store</h3>
-            <p>Apple silicon or Intel.</p>
-          </div>
-        </article>
-        <article class="step">
-          <span class="step-n">02</span>
-          <div>
-            <h3>Connect a model</h3>
-            <p>Paste your Claude or OpenAI-compatible key, or locally load your download model. </p>
-          </div>
-        </article>
-        <article class="step">
-          <span class="step-n">03</span>
-          <div>
-            <h3>Tell the agent what you want</h3>
-            <p>Fill the Work Brief, then say the task. Ask &amp; Do confirms the calendar. Code &amp; Write runs in a folder you choose. Multi-agent uses the roles already in the app.</p>
-          </div>
-        </article>
+        <div class="dial-stage" id="dial-stage" aria-label="Features">
+          <button type="button" class="dial-item is-on">Daily</button>
+          <button type="button" class="dial-item">With MCP</button>
+          <button type="button" class="dial-item">Harness</button>
+          <button type="button" class="dial-item">Agents</button>
+          <button type="button" class="dial-item">Expand</button>
+        </div>
       </div>
     </div>
   </section>
@@ -289,6 +194,7 @@
       </div>
     </div>
   </footer>
+  </div>
   <script>
     (function () {
       var list = document.getElementById("news-list");
@@ -301,46 +207,251 @@
       });
     })();
     (function () {
-      var list = document.getElementById("feature-list");
-      var button = document.getElementById("feature-toggle");
-      if (!list || !button) return;
-      button.addEventListener("click", function () {
-        var open = list.classList.toggle("is-collapsed") === false;
-        button.setAttribute("aria-expanded", open ? "true" : "false");
-        button.textContent = open ? "Show less" : "Show all videos";
-        if (!open) {
-          list.querySelectorAll(".feature-more video").forEach(function (video) { video.pause(); });
+      var stage = document.getElementById("dial-stage");
+      var title = document.getElementById("dial-title");
+      var copy = document.getElementById("dial-copy");
+      if (!stage || !title || !copy) return;
+      var items = [].slice.call(stage.querySelectorAll(".dial-item"));
+      var features = [
+        {
+          title: "Daily questions",
+          html: "<p>Ask in the same chat: type, attach a picture or a file, or hold to talk. Calendar and mail are part of this daily work. The chat for this is the Ask &amp; Do mode. <a href=\"docs.html#ask-and-do\">Ask &amp; Do</a></p><p>Calendar. A time such as “basketball at 9am” shows a confirmation card first. The event is written only after you agree. Add on the main window puts one event on the calendar without the model. <a href=\"docs.html#calendar\">Calendar</a> · <a href=\"images/demo-batch-tasks.mp4\">Watch</a></p><p>Mail. Gmail and Outlook connect through Nylas. iCloud uses IMAP on this Mac. Today’s inbox lists the sender and a short summary. The model can draft a reply, and it sends only after you edit it and agree. <a href=\"docs.html#mail\">Mail</a> · <a href=\"images/demo-mail.mp4\">Watch</a></p>"
+        },
+        {
+          title: "Questions with MCP",
+          html: "<p>A question can call a built-in tool and stay in the chat. Web lookup and an MCP call are tools for that question. They are not separate features, and installing a new plugin is covered under Expand.</p><p>Web. The globe on the composer decides whether this turn may search. On means the app searches public pages, reads the ones it needs, then answers. Paper lookups go through arXiv. The query does not include a local path or a secret. <a href=\"docs.html#web\">Web</a></p><p>MCP. Name a tool that is already installed and enabled. The call leaves from this chat, and the reply is a console card: what was called, the exit status, and the output. <a href=\"docs.html#extensions\">How a call returns</a> · <a href=\"images/demo-mcp-connect.mp4\">Watch</a></p>"
+        },
+        {
+          title: "Coding harness",
+          html: "<p>Code &amp; Write is the coding harness. Choose a folder. The app writes there, runs the work, and brings the command and the exit status back to the chat. If the program writes a result file, the chat gives you that file. It stays in this app. It does not open another IDE, and it does not open an unrestricted terminal. <a href=\"docs.html#code-and-write\">Code &amp; Write</a> · <a href=\"images/demo-developer-homepage.mp4\">Watch a session</a></p><p>Git can be set up from the same chat: configure it, create a same-named GitHub project, and merge the local files. <a href=\"images/demo-git-setup.mp4\">Watch Git setup</a></p>"
+        },
+        {
+          title: "Multi-agent workflows",
+          html: "<p>The roles already in the app split a goal: Control, Sales, General Manager, CTO, Engineer, Design, Marketing, Finance, Operations, and Research. After you write the goal, Control assigns the work. You can talk to one role, or let the relevant roles work in the group chat.</p><p>These are the preset workflows. They stay in this window. The roles do not sign, pay, or send contracts. <a href=\"docs.html#multi-agent\">Multi-agent</a> · <a href=\"images/demo-agent-discussion.mp4\">Watch</a></p>"
+        },
+        {
+          title: "Extend the app",
+          html: "<p>Add what the preset roles do not cover. On the plugin page you search, install, and enable a plugin. The chat does not download one by itself. A skill is a file of steps you place in a skills folder; a matching task reads that file.</p><p>For a team of your own, make a custom role from an existing one. The app writes a role card. <a href=\"docs.html#extensions\">Plugins</a> · <a href=\"docs.html#skills\">Skills</a> · <a href=\"docs.html#multi-agent\">Open a team</a> · <a href=\"images/demo-mcp-connect.mp4\">Watch a plugin</a></p>"
         }
+      ];
+      var count = items.length;
+      var shift = 0;
+      var pointer = null;
+      var moved = false;
+      var frame = 0;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      function wrap(value) {
+        var d = value - count * Math.round(value / count);
+        return d;
+      }
+      function selectedIndex() {
+        return ((Math.round(shift) % count) + count) % count;
+      }
+      function showDetail(index) {
+        var feature = features[index];
+        title.textContent = feature.title;
+        copy.innerHTML = feature.html;
+        items.forEach(function (item, i) {
+          var on = i === index;
+          item.classList.toggle("is-on", on);
+          if (on) item.setAttribute("aria-current", "true");
+          else item.removeAttribute("aria-current");
+        });
+      }
+      function place() {
+        var width = stage.clientWidth;
+        var height = stage.clientHeight;
+        var size = 104;
+        var step = Math.min(146, height * 0.28);
+        items.forEach(function (item, i) {
+          var delta = wrap(i - shift);
+          var away = Math.abs(delta);
+          var scale = Math.max(0.74, 1 - away * 0.1);
+          var radius = size * 0.5 * scale;
+          var x = width - radius - 16 - away * 8;
+          var y = height * 0.5 + delta * step;
+          var hidden = Math.max(0, -y + radius) + Math.max(0, y + radius - height);
+          var cover = hidden / (radius * 2);
+          item.style.transform = "translate(" + x + "px, " + y + "px) scale(" + scale + ")";
+          item.style.zIndex = String(100 - Math.round(away * 10));
+          item.style.filter = cover < 0.04 ? "none" : "blur(" + Math.min(8, cover * 9).toFixed(2) + "px)";
+          item.style.opacity = "1";
+        });
+        showDetail(selectedIndex());
+      }
+      function animateTo(target) {
+        window.cancelAnimationFrame(frame);
+        if (reduce) {
+          shift = target;
+          place();
+          return;
+        }
+        var from = shift;
+        var start = 0;
+        function tick(now) {
+          if (!start) start = now;
+          var t = Math.min(1, (now - start) / 280);
+          var eased = 1 - Math.pow(1 - t, 3);
+          shift = from + (target - from) * eased;
+          place();
+          if (t < 1) frame = window.requestAnimationFrame(tick);
+        }
+        frame = window.requestAnimationFrame(tick);
+      }
+      stage.addEventListener("pointerdown", function (event) {
+        if (event.target.closest("a")) return;
+        moved = false;
+        pointer = { id: event.pointerId, y: event.clientY, shift: shift };
+        stage.setPointerCapture(event.pointerId);
+        stage.classList.add("is-dragging");
+        window.cancelAnimationFrame(frame);
       });
+      stage.addEventListener("pointermove", function (event) {
+        if (!pointer || pointer.id !== event.pointerId) return;
+        if (Math.abs(pointer.y - event.clientY) > 4) moved = true;
+        shift = pointer.shift + (pointer.y - event.clientY) / 78;
+        place();
+      });
+      function release(event) {
+        if (!pointer || pointer.id !== event.pointerId) return;
+        pointer = null;
+        stage.classList.remove("is-dragging");
+        animateTo(Math.round(shift));
+      }
+      stage.addEventListener("pointerup", release);
+      stage.addEventListener("pointercancel", release);
+      stage.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        shift += event.deltaY / 240;
+        place();
+        window.clearTimeout(stage._snap);
+        stage._snap = window.setTimeout(function () { animateTo(Math.round(shift)); }, 120);
+      }, { passive: false });
+      items.forEach(function (item, i) {
+        item.addEventListener("click", function () {
+          if (moved) return;
+          var delta = wrap(i - shift);
+          animateTo(shift + delta);
+        });
+      });
+      window.addEventListener("resize", place);
+      place();
     })();
     (function () {
       var slides = [
-        ["images/web/01-extensions.png", "Extensions, with plugins installed through MCP"],
-        ["images/web/02-code-write.png", "Code and Write, with the editor beside the chat"],
-        ["images/web/03-multi-agent.png", "Multi-agent workflow"],
-        ["images/web/04-open-team.png", "Open team conversation"]
+        {
+          src: "images/web/01-extensions.png",
+          alt: "Ask & Do, with a conversation and built-in MCP tools",
+          plan: "Starter",
+          title: "Ask & Do",
+          text: "Ask & Do is included in Starter. In one sentence, it is your assistant. In this mode you hold an ordinary conversation with the agent. You can also call the built-in MCP tools for basic file editing, and for work in external apps and plugins. Several workflows are already here, including goal-oriented planning, so a task is easier to lay out."
+        },
+        {
+          src: "images/web/02-code-write.png",
+          alt: "Code & Write, with the editor beside the chat",
+          plan: "Standard",
+          title: "Code & Write",
+          text: "Code & Write is included in Standard. Built on Ask & Do, it adds a code workflow managed by the harness. In this mode you can take on programming tasks at the scale of a document. We will keep improving it so the work goes faster."
+        },
+        {
+          src: "images/web/03-multi-agent.png",
+          alt: "Multi-agent, with a preset group and a workflow",
+          plan: "Standard",
+          title: "Multi-agent",
+          text: "Multi-agent is also part of Standard. Many people already use a group of agents to finish a task, and putting that group together is not simple. This mode includes a few agent groups that are already set up, and a workflow for building one of your own. You can start a multi-agent workflow from here."
+        },
+        {
+          src: "images/web/04-open-team.png",
+          alt: "Open team, a conversation with the agents you choose",
+          plan: "Scale",
+          title: "Open team",
+          text: "Open team is part of Scale, the highest plan. Mixed harness belongs to the same plan and is another mode for extending the app. In short, Open team lets you build an agent group through open conversation and by talking with each agent. You can use every agent fully, and manage your own workflow in finer detail."
+        }
       ];
       var shot = document.getElementById("product-shot");
-      var img = document.getElementById("product-slide");
-      if (!shot || !img) return;
+      var stage = shot && shot.querySelector(".product-stage");
+      var planEl = document.getElementById("mode-plan");
+      var titleEl = document.getElementById("mode-title");
+      var textEl = document.getElementById("mode-text");
+      if (!shot || !stage) return;
       var dots = shot.querySelectorAll(".product-dots button");
       var index = 0;
+      var timer = 0;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       function show(next) {
         index = (next + slides.length) % slides.length;
-        img.src = slides[index][0];
-        img.alt = slides[index][1];
+        var slide = slides[index];
+        if (planEl) planEl.textContent = slide.plan;
+        if (titleEl) titleEl.textContent = slide.title;
+        if (textEl) textEl.textContent = slide.text;
+        var current = stage.querySelector("img.is-on");
+        if (current && current.getAttribute("src") === slide.src) {
+          arm();
+          return;
+        }
+        var incoming = document.createElement("img");
+        incoming.src = slide.src;
+        incoming.alt = slide.alt;
+        stage.appendChild(incoming);
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { incoming.classList.add("is-on"); });
+        });
+        if (current) {
+          current.classList.remove("is-on");
+          window.setTimeout(function () {
+            if (current.parentNode) current.remove();
+          }, reduce ? 0 : 900);
+        }
         dots.forEach(function (dot, i) {
           var on = i === index;
           dot.classList.toggle("is-on", on);
           dot.setAttribute("aria-selected", on ? "true" : "false");
         });
+        arm();
+      }
+      var zooming = false;
+      function arm() {
+        window.clearInterval(timer);
+        if (reduce || zooming) return;
+        timer = window.setInterval(function () { show(index + 1); }, 4200);
       }
       shot.querySelector(".product-prev").addEventListener("click", function () { show(index - 1); });
       shot.querySelector(".product-next").addEventListener("click", function () { show(index + 1); });
       dots.forEach(function (dot, i) {
         dot.addEventListener("click", function () { show(i); });
       });
+      var dialog = document.getElementById("product-lightbox");
+      var dialogImg = dialog && dialog.querySelector("img");
+      shot.addEventListener("mouseenter", function () { window.clearInterval(timer); });
+      shot.addEventListener("mouseleave", function () { if (!zooming) arm(); });
+      if (dialog && dialogImg) {
+        shot.querySelector(".product-zoom").addEventListener("click", function () {
+          var current = stage.querySelector("img.is-on");
+          if (!current) return;
+          zooming = true;
+          window.clearInterval(timer);
+          dialogImg.src = current.getAttribute("src");
+          dialogImg.alt = current.alt;
+          dialog.showModal();
+        });
+        dialog.querySelector(".product-lightbox-close").addEventListener("click", function () {
+          dialog.close();
+        });
+        dialog.addEventListener("click", function (event) {
+          if (event.target === dialog) dialog.close();
+        });
+        dialog.addEventListener("close", function () {
+          zooming = false;
+          arm();
+        });
+      }
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) window.clearInterval(timer);
+        else arm();
+      });
+      arm();
     })();
   </script>
+  <script src="site.js?v=65"></script>
 </body>
 </html>

@@ -8,32 +8,25 @@
   <link rel="icon" href="images/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=34">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,560&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=83">
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="index.html">
-        <img src="images/icon.png" alt="">
         Agent Butler
       </a>
       <div class="nav-links">
         <a href="index.html">Start</a>
-        <div class="nav-drop">
-          <button class="nav-drop-label" type="button" aria-current="page">Resource</button>
-          <div class="nav-sub">
-            <a href="demos.html">Development log &amp; videos</a>
-            <a href="docs.html" aria-current="page">Documentation</a>
-          </div>
-        </div>
+        <a href="install.html">Install</a>
+        <a href="docs.html" aria-current="page">Documentation</a>
         <a href="pricing.html">Pricing</a>
-      </div>
-      <div class="nav-tools">
-        <a class="btn btn-accent" href="https://apps.apple.com/us/app/agent-butler-client/id6802941136?mt=12">Download from Mac App Store (Beta 2.15)</a>
       </div>
     </div>
   </nav>
+
+  <div class="page-rail">
 
   <section>
     <div class="wrap docs-shell">
@@ -109,14 +102,14 @@
             <img src="images/guide/terminal.png" alt="">
             <div>
               <h3>Code &amp; Write</h3>
-              <p>The same kind of code  as Codex and Claude Code, inside this app. Choose a folder. The command and the result come back in the chat.</p>
+              <p>The same kind of code workflow as Codex and Claude Code, inside this app. Choose a folder. The command and the result come back in the chat.</p>
             </div>
           </a>
           <a class="doc-card" href="#multi-agent">
             <img src="images/guide/person_crop_circle.png" alt="">
             <div>
               <h3>Multi-agent</h3>
-              <p>Finish a job with multi-agent .</p>
+              <p>Finish a job with the roles already in the app: Control, Sales, General Manager, CTO, Engineer, and others. You do not open a separate framework.</p>
             </div>
           </a>
         </div>
@@ -210,7 +203,7 @@
         <h3><img src="images/guide/person_text_rectangle.png" alt="">Work Brief</h3>
         <p>“Who I am” is identity and routine. That original text is for you. “Consider at work” is what scheduling and tasks must respect.</p>
         <p>Completing the brief compares what you already wrote with the recent conversation, appends facts you have said, and asks a few short questions for the rest. After you save and generate the summary, later turns read three short summaries. They do not paste the whole original into every turn.</p>
-        <p>Constraints you write in the current chat, such as “don’t”, “must”, “only use”, are carried into the next turn. This is not a personal archive that grows on its own.</p>
+        <p>Constraints you write in the current chat, such as “don’t”, “must”, “only use”, or “please use Chinese”, are carried into the next turn. This is not a personal archive that grows on its own.</p>
       </article>
 
       <article class="doc-article" id="first-task">
@@ -238,9 +231,9 @@
 
       <article class="doc-article" id="multi-agent">
         <h3><img src="images/guide/person_crop_circle.png" alt="">Multi-agent</h3>
-        <p>The built-in roles are Control, Engineer, Reviewer. You can also make a custom role from an existing one. The app writes a role card. </p>
-        <p>Multi-agent team work in a form of workflow. And, we've uploaded three pre-set coding workflows, and will upload one video workflow. Users can complete specific task through according workflow.</p>
-        <p>These roles are not people. They do not sign, pay, or send contracts. </p>
+        <p>The built-in roles are Control, Sales, General Manager, CTO, Engineer, Design, Marketing, Finance, Operations, and Research. You can also make a custom role from an existing one. The app writes a role card.</p>
+        <p>After you write the goal, Control assigns the work. You can talk to one role, or let the relevant roles work in the group chat. You do not switch apps to reach the assistant or Code &amp; Write.</p>
+        <p>These roles are not people. They do not sign, pay, or send contracts. This mode also waits until the local runner is installed.</p>
       </article>
 
       <article class="doc-article" id="extensions">
@@ -338,5 +331,7 @@
       </div>
     </div>
   </footer>
+  </div>
+  <script src="site.js?v=65"></script>
 </body>
 </html>
